@@ -1,0 +1,494 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+
+*{
+    margin: 0;  
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+body{
+    background-color: black;
+}
+
+.main{
+    height: 80vh;
+    width: 100vw;
+    background-image: url("assets/images/bg.jpg");
+    background-size: 120%; 
+    position: relative;
+    border-bottom: 8px solid rgb(44, 44, 44);
+}
+
+.main .box{
+    height: 80vh;
+    width: 100%;
+    opacity: 0.50;
+    background-color: black;
+    position: absolute;
+    top: 0;
+    overflow: hidden;
+}
+
+/* For navigation menu */
+
+.nav-bar{
+    margin: 0 auto;
+    max-width: 1200px;
+    height: 100px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    z-index: 10;
+}
+
+.netflix-logo{
+    width: 150px;
+}
+
+.btn-container{
+    display: flex;
+    gap: 1rem;
+}
+
+.lng-img{
+    width: 20px;
+    height: 19px;
+    margin-top: 8px;
+    margin-right: -50px;
+}
+
+#Language-picker{
+    padding: 5px 5px 5px 40px;
+    background-color: transparent;
+    color: white;
+    border: 1px solid rgba(255, 255, 255, 0.349);
+    font-size: 16px;
+    font-weight: 500;
+    border-radius: 5px;
+    outline: none;
+    outline: white;
+}
+
+option{
+    background-color: white;
+    color: black;
+}
+
+.sign-in-btn{
+    padding: 5px 12px;
+    background-color: red;
+    color: white;
+    border-radius: 5px;
+    font-size: 15px;
+    font-weight: 500;
+    cursor: pointer;
+    transition-duration: 0.2s;
+}
+
+.sign-in-btn:hover{
+    background-color: rgb(206, 0, 0);
+}
+
+/* For hero section */
+
+.hero-section{
+    margin: 0 auto;
+    max-width: 1200px;
+    height: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+    color: white;
+    position: relative;
+    padding: 2rem;
+    z-index: 10;
+}
+
+.main-title{
+    font-size: 44px;
+    font-weight: 800;
+}
+
+.short-title{
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.email{
+    padding: 20px 140px 20px 10px;
+    background-color: rgba(0, 0, 0, 0.322);
+    color: white;
+    text-align: start;
+    border: 1px solid red;
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 5px;
+    outline: none;
+}
+
+.email::placeholder{
+    color: rgba(255, 255, 255, 0.76);
+}
+
+.start-btn{
+    padding: 16px 25px;
+    background-color: red;
+    color: white;
+    border: none;
+    font-size: 20px;
+    font-weight: 600;
+    border-radius: 5px;
+    cursor: pointer;
+    transition-duration: 0.2s;
+}
+
+.start-btn:hover{
+    background-color: rgb(187, 0, 0);
+}
+
+/* For tv section */
+
+.tv-section{
+    margin: auto;
+    max-width: 1200px;
+    min-height: auto;
+    padding: 4.5rem 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    padding-bottom: 2rem;
+    overflow: hidden;
+}
+
+.left-container{
+    width: 50%;
+    margin-top: 70px;
+}
+
+.show-content{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    text-align: start;
+}
+
+.tv-title{
+    font-size: 48px;
+}
+
+.tv-desc{
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.right-container{
+    position: relative;
+    width: 50%;
+}
+
+.tv-img{
+    width: 30vw;
+    position: absolute;
+    top: 0;
+    z-index: 2;
+}
+
+.tv-video{
+    position: inherit;
+    right: 0;
+    width: 24vw;
+    margin-top: 80px;
+    margin-left: 70px;
+}
+
+/* Download section */
+
+.download-section{
+    margin: auto;
+    max-width: 1200px;
+    min-height: auto;
+    padding: 4.5rem 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    padding-bottom: 1.5rem;
+}
+
+.download-netflix-img{
+    margin-top: -140px;
+    margin-bottom: 100px;
+    border: 3px solid rgba(255, 255, 255, 0.349);
+    border-radius: 20px;
+    padding: 5px;
+    background-color: black;
+}
+
+.right-section{
+    display: flex;
+    flex-direction: column;
+    text-align: start;
+    gap: 1rem;
+}
+
+.download-title{
+    font-size: 48px;
+    line-height: 1;
+}
+
+.download-desc{
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.border-top{
+    margin-top: 5rem;
+    border-bottom: 8px solid rgb(44, 44, 44);
+    width: 100%;
+    min-height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.border-bottom{
+    border-bottom: 8px solid rgb(44, 44, 44);
+    width: 100%;
+    min-height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Watch everywhere section */
+
+.watch-section{
+    margin: auto;
+    max-width: 1200px;
+    min-height: 400px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+}
+
+.watch-left-container{
+    width: 50%;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 1rem;
+    margin-top: 120px;
+}
+
+.watch-show-content{
+    width: 100%;
+    gap: 1rem;
+    text-align: start;
+}
+
+.watch-tv-title{
+    font-size: 48px;
+    line-height: 1; 
+    margin-bottom: 20px;
+}
+
+.watch-tv-desc{
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.watch-right-container{
+    position: relative;
+    width: 50%;
+}
+
+.watch-tv-img{
+    width: 30vw;
+    position: absolute;
+    top: 0;
+    z-index: 2;
+}
+
+.watch-tv-video{
+    display: inline-block;
+    vertical-align: baseline;
+    object-fit: contain;
+    overflow-clip-margin: content-box;
+    overflow: clip;
+    width: 18vw;
+    margin-top: 40px;
+    margin-left: 111px;
+}
+
+.border-bottom2{
+    border-bottom: 8px solid rgb(44, 44, 44);
+    width: 100%;
+    min-height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 200px;
+}
+
+/* Profile section */
+
+.profile-section{
+    margin: auto;
+    max-width: 1200px;
+    min-height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    padding: 4rem 0; 
+}
+
+.profile-right-section{
+    display: flex;
+    flex-direction: column;
+    text-align: start;
+    gap: 1rem;
+}
+
+.profile-title{
+    font-size: 44px;
+    line-height: 1;
+}
+
+.profile-desc{
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.border-top{
+    margin-top: 5rem;
+    border-bottom: 8px solid rgb(44, 44, 44);
+    width: 100%;
+    min-height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.border-bottom3{
+    border-bottom: 8px solid rgb(44, 44, 44);
+    width: 100%;
+    min-height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Frequently asked questions section */
+
+.frequently-asked-question{
+    margin: auto;
+    max-width: 1200px;
+    padding: 4rem 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    gap: 1rem;
+}
+
+.asked-questions{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.qs-1{
+    font-size: 22px;
+    font-weight: 500;
+}
+
+.fr-heading{
+    font-size: 48px;
+    padding-bottom: 2rem;
+}
+
+.down-arrow{
+    width: 30px;
+    height: 30px;
+}
+
+.asked-questions{
+    padding: 15px 20px;
+    background-color: rgb(45,45,45);
+    transition-duration: 0.3s;
+}
+
+.asked-questions:hover{
+    background-color: rgb(80, 80, 80);
+}
+
+.frequently-asked-question .margin{
+    margin-bottom: 20px;
+}
+
+/* For footer section */
+
+.footer-container{
+    margin: auto;
+    max-width: 1200px;
+    height: 300px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 4.5rem 0;
+    color: white;
+}
+
+.link{
+    font-size: 15px;
+}
+
+.footer-container li{
+    list-style: none;
+    margin-bottom: 10px;
+}
+
+.footer-container li:last-child{
+    list-style: none;
+    margin-top: 10px;
+}
+
+.lng-img2{
+    width: 20px;
+    height: 19px;
+    margin-bottom: -3px;
+    margin-right: -40px;
+}
+
+#Language-picker2{
+    padding: 5px 5px 5px 40px;
+    background-color: transparent;
+    color: white;
+    border: 1px solid rgba(255, 255, 255, 0.349);
+    font-size: 16px;
+    font-weight: 500;
+    border-radius: 5px;
+    outline: none;
+    outline: white;
+}
