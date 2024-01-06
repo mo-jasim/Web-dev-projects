@@ -1,1 +1,1 @@
-# Netflix-clone
+In this repository I have built the Netflix homepage clone using only HTML & CSS
