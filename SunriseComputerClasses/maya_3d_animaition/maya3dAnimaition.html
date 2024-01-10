@@ -1,0 +1,770 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/29c2b75804.js" crossorigin="anonymous"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/first_section.css">
+    <link rel="stylesheet" href="../css/third-section.css">
+    <link rel="stylesheet" href="../css/form-section.css">
+    <link rel="stylesheet" href="../css/footer.css">
+    <title>Document</title>
+</head>
+
+<style>
+    * {
+        box-sizing: border-box;
+        padding: 0;
+        margin: 0;
+    }
+
+    .header {
+        display: flex;
+        height: 80vh;
+        flex-direction: row;
+    }
+
+    .primary {
+        font-size: 60px;
+    }
+
+    .secondary {
+        font-size: 40px;
+    }
+
+    .tertiary {
+        font-size: 25px;
+    }
+
+    .textContent {
+        color: white;
+        text-transform: capitalize;
+        font-style: italic;
+    }
+
+    .section {
+        width: 50%;
+        height: 100%;
+    }
+
+    .left {
+        background-image: linear-gradient(to right bottom, transparent, rgba(0, 0, 0, 0.8) 100%), url(../assests/img/background_image3.jpg);
+        background-size: cover;
+        position: relative;
+
+    }
+
+    .textContainer {
+        text-align: center;
+        width: 70%;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .right {
+        background-color: #eee;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .list {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .list-style-1 {
+        list-style: none;
+        font-size: 20px;
+    }
+
+    .list-style-2 {
+        list-style: none;
+        font-size: 25px;
+    }
+
+    .fa-arrow-alt-circle-right {
+        background-image: linear-gradient(to right bottom, rgb(255, 0, 0), rgb(111, 0, 255));
+        color: transparent;
+        background-clip: text;
+        -webkit-background-clip: text;
+    }
+
+    .moduleSection-1,
+    .moduleSection-2 {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        padding: 20px;
+    }
+
+    .moduleSection-1 h1,
+    .moduleSection-2 h1 {
+        background-image: linear-gradient(to right, rgb(255, 0, 0), rgb(111, 0, 255));
+        color: transparent;
+        background-clip: text;
+        -webkit-background-clip: text;
+        font-size: 30px;
+        text-align: center;
+        font-style: italic;
+
+    }
+
+    .lists-4 {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: auto;
+    }
+
+    .lists-2 {
+        display: grid;
+        grid-template-columns: repeat(2, auto);
+        grid-template-rows: auto;
+        justify-content: space-evenly;
+    }
+
+    .descriptionMain {
+        width: 100%;
+        height: fit-content;
+    }
+
+    .descriptionDiv {
+        width: 70%;
+        height: fit-content;
+        margin: 0 auto;
+        padding: 20px;
+    }
+
+    .nav-pills {
+        justify-content: space-between;
+        background-color: #eee;
+    }
+
+    @media (max-width:1250px) {
+        .lists-4 {
+            grid-template-columns: repeat(2, auto);
+        }
+    }
+
+    @media (max-width:1050px) {
+        .descriptionDiv {
+            width: 100%;
+        }
+    }
+
+    @media (max-width: 700px) {
+        .header {
+            flex-direction: column;
+            height: max-content;
+        }
+
+        .section {
+            width: 100%;
+        }
+
+        .left {
+            height: 80vh;
+        }
+
+        .textContainer {
+
+            width: 100%;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+    }
+
+    @media (max-width:450px) {
+
+        .lists-2,
+        .lists-4 {
+            grid-template-columns: repeat(1, auto);
+        }
+
+    }
+
+    @media (max-width:350px) {
+
+        .lists-2,
+        .lists-4 {
+            grid-template-columns: repeat(1, auto);
+        }
+    }
+</style>
+
+<body>
+    <div class="contact-navbar">
+        <div class="contact-info">
+            <i class="fa fa-phone"></i>
+            <span class="phoneNumber">Sunrise Computer Classes : <a class="phoneNumberLink"
+                    href="tel:8826118037">8826118037</a>
+                , <a class="phoneNumberLink" href="tel:9650173057">7053301150</a></span>
+            <i class="fa fa-envelope-o"></i>
+            <span class="emailId"><a class="emailAddressLink"
+                    href="mailTo:sunrisecomputernoida@gmail.com">sunrisecomputernoida@gmail.com</a></span>
+        </div>
+        <div class="social-media-links">
+            <a href="https://www.facebook.com/Sunrisecarrier/?ref=bookmarks">
+                <i class="fab fa-facebook"></i>
+            </a>
+            <a href="https://www.instagram.com/sunriseclassesnoida1/">
+                <i class="fab fa-instagram"></i>
+            </a>
+            <a href="https://twitter.com/ClassesNoida">
+                <i class="fab fa-twitter"></i>
+            </a>
+            <a href="https://www.youtube.com/channel/UCQeoMZErJ4ENUl3VM_f78Mg/featured?view_as=subscriber">
+                <i class="fab fa-youtube"></i>
+            </a>
+        </div>
+    </div>
+    <nav class="navigation-bar sticky-top">
+        <a href="../computer.html"><img class="logo-image" src="../assests/img/logo.jpg" alt=""></a>
+        <div class="open-nav-button">
+            <i class="fa fa-bars"></i>
+        </div>
+        <div class="nav-box">
+            <a class="navigation-bar-link" href="../computer.html">home</a>
+
+            <a class="dropdown">
+                <a class="dropdown-toggle navigation-bar-link" type="button" id="dropdownMenuButton1"
+                    data-bs-toggle="dropdown" aria-expanded="false">
+                    tally & excel
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                    <li><a class="dropdown-item" href="../advance_excel/AdvanceExcel.html">advance excel</a></li>
+                    <li><a class="dropdown-item" href="../tally_erp_executive/tallyErpExecutive.html">tally erp
+                            executive</a></li>
+                    <li><a class="dropdown-item" href="../tally_erp_operations/tallyErpOperations.html">tally erp
+                            operations</a></li>
+
+                </ul>
+            </a>
+            <a class="dropdown">
+                <a class="dropdown-toggle navigation-bar-link" type="button" id="dropdownMenuButton1"
+                    data-bs-toggle="dropdown" aria-expanded="false">
+                    graphic & web
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                    <li><a class="dropdown-item" href="../web_designing/webdesigning.html">advance diploma in web
+                            designing</a></li>
+                    <li><a class="dropdown-item" href="../graphic_designing/graphicDesigning.html">advance diploma in
+                            graphic designing</a></li>
+                    <li><a class="dropdown-item" href="../photoshop/photoshop.html">advance photoshop course</a></li>
+
+                </ul>
+            </a>
+            <a class="dropdown">
+                <a class="dropdown-toggle navigation-bar-link" type="button" id="dropdownMenuButton1"
+                    data-bs-toggle="dropdown" aria-expanded="false">
+                    animation
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                    <li><a class="dropdown-item" href="../multimedia_&_animation/multimedia&Animation.html">1 year
+                            multimedia & animation</a></li>
+                    <li><a class="dropdown-item" href="../maya_3d_animaition/maya3dAnimaition.html">maya 3d animaition
+                            course</a></li>
+                    <li><a class="dropdown-item"
+                            href="../Premeire_Pro_Video_Editing_Course/PremeireProVideoEditingCourse.html">premeire pro
+                            video editing course</a></li>
+                    <li><a class="dropdown-item" href="../character_modelling/characterModelling.html">character
+                            modelling
+                            course</a></li>
+                    <li><a class="dropdown-item" href="../vfx/vfx.html">vfx visual effects & video course</a></li>
+                </ul>
+            </a>
+            <a class="dropdown">
+                <a class="dropdown-toggle navigation-bar-link" type="button" id="dropdownMenuButton1"
+                    data-bs-toggle="dropdown" aria-expanded="false">
+                    architecture
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                    <li><a class="dropdown-item" href="../autocad/autocad.html">autocad 2d & 3d</a></li>
+                    <li><a class="dropdown-item" href="../revit_architecture/revitArchitecture.html">diploma in revit
+                            architecture</a></li>
+                    <li><a class="dropdown-item" href="../3d_max/3dMax.html">3d max course</a></li>
+                    <li><a class="dropdown-item" href="../revit_mep/Revit mep.html">revit mep</a></li>
+                </ul>
+            </a>
+
+            <a class="dropdown">
+                <a class="dropdown-toggle navigation-bar-link" type="button" id="dropdownMenuButton1"
+                    data-bs-toggle="dropdown" aria-expanded="false">
+                    digital marketing
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                    <li><a class="dropdown-item" href="../digital_marketing/digitalMarketing.html">digital marketing
+                            course
+                            - top rated</a></li>
+
+                    <li><a class="dropdown-item" href="../internet_marketing/internetMarketing.html">1 year master in
+                            internet marketing course</a></li>
+                </ul>
+            </a>
+
+            <div class="close-nav-button">
+                <i class="fa fa-times"></i>
+            </div>
+            <span class="icons">
+                <a href="https://facebook.com"><i class="fab fa-facebook"></i></a>
+                <a href="https://instagram.com"><i class="fab fa-instagram"></i></a>
+                <a href="https://twitter.com"><i class="fab fa-twitter"></i></a>
+                <a href="https://youtube.com"><i class="fab fa-youtube"></i></a>
+            </span>
+        </div>
+    </nav>
+
+    <header class="header">
+        <button onclick="topFunction()" id="goToTopBtn" class="goToTopBtn" title="Go to top">
+            <i class='fas fa-arrow-circle-up'></i>
+        </button>
+        <div class="section left">
+            <div class="textContainer">
+                <span class="textContent secondary">
+                    ADVANCE DIPLOMA IN MAYA ANIMATION COURSE
+                    Special Offer ₹ <s>71,550</s> 45,550/- All Inclusive
+                </span>
+            </div>
+        </div>
+        <div class="section right">
+            <ul class="list-style-1 list">
+                <li class="tertiary"><i class='far fa-arrow-alt-circle-right'></i> SOFTWARE</li>
+                Autodesk Maya is a 3D software used by animation industry across the
+                world. It is 3D designing software.
+                Learning Maya Course can be used for realistic 3D animation, 3D modeling, realistic 3D environment,
+                visual effects and many other effects. Maya is used not only for animated movies but for news channels,
+                television commercials, advertisements, manufacturing, video gaming industry etc.
+                <li class="tertiary"><i class='far fa-arrow-alt-circle-right'></i> PRE-REQUISITES</li>
+                Basic knowledge of Windows
+                Working knowledge of Photoshop/ Illustrator.
+            </ul>
+        </div>
+    </header>
+
+    <section class="form-section">
+        <div class="form-s-content">
+            <span class="form-section-span">instant inquiry</span>
+            <div class="input-div">
+                <input type="text" class="input name" placeholder="name">
+                <input type="email" class="input email" placeholder="email">
+                <input type="number" class="input password" placeholder="phone">
+                <div class="third-section-btn-div">
+                    <a href="#" class="third-s-btn">request call back</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="moduleSection-1">
+        <div class="lists-2">
+            <ul class="list list-style-2">
+                <h1 class="secondary">INTRODUCTION</h1>
+                Advance Maya Animation Course. This 3D animation course is a Short-term certified course, taught by the
+                Experienced professionals. This course is designed to help you learn the core features and concepts of
+                Maya. The Autodesk Maya Software allows 3D artists to create the elaborate computer-generated
+                environments and stunning digital characters.
+            </ul>
+        </div>
+    </section>
+    <section class="moduleSection-1">
+        <h1 class="secondary">WHAT YOU WILL LEARN?</h1>
+
+
+        <div class="lists-2">
+
+            <ul class="list list-style-2">
+                <li><i class='far fa-arrow-alt-circle-right'></i> Planning</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Sketching</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Scripting</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Storyboarding</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Concept Art</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Modeling</li>
+            </ul>
+            <ul class="list list-style-2">
+                <li><i class='far fa-arrow-alt-circle-right'></i> Texturing</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Lighting</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Rigging</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Skinning</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Exposion</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Animation</li>
+
+            </ul>
+        </div>
+    </section>
+
+    <section class="moduleSection-1">
+        <h1 class="secondary">CAREER PATHS</h1>
+
+        <div class="lists-2">
+
+            <ul class="list list-style-2">
+                <li><i class='far fa-arrow-alt-circle-right'></i> Digital Artist</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> 3D Maya Modeler</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Rendering Artist</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Texturing Artist</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Character Artist</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Maya Designer</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Texturing Artist</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> 3D Visualizer</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> 3D Modeling Designer</li>
+
+            </ul>
+            <ul class="list list-style-2">
+
+                <li><i class='far fa-arrow-alt-circle-right'></i> Animation Artist</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Lighting Artist</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Character Animator</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Digital Effects Animator</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Poster Design Artist</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Modeling Artist</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Pre-visualization Artist</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Rigging Artist</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Motion Graphic Artist</li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="moduleSection-1">
+        <h1 class="secondary">6. COURSE CURRICULUM</h1>
+
+        <div class="lists-2">
+            <ul class="list list-style-2">
+                <h1 class="secondary">MODULE 1. VISUALIZATION & CONCEPT ART</h1>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Artistic Visualization</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Basics of Drawing</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Types of Lines</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Types of Shading</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Types of Tracing</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Free Hand Drawing</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Working with Layouts</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Visual Grammar</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Anatomy (The Head &amp; the Figures)</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Facial Expressions: Figures</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Figure sketches study</li>
+            </ul>
+            <ul class="list list-style-2">
+                <li><i class='far fa-arrow-alt-circle-right'></i> Concepts to basic techniques in Animation</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Construction Line</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Character Development</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Storyboard Making</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Lighting &amp; Shading Study</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Classical Animation</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Principles of animation</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> FlipBook Design with Light Box</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Developing a storyline concept</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Outlining Conceptual ideas</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Animation Layout and Design</li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="moduleSection-1">
+        <div class="lists-2">
+            <ul class="list list-style-2">
+                <h1 class="secondary">MODULE 2. ANIMATION FUNDAMENTALS</h1>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Course Overview</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Getting Started with Maya</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Basic Modeling</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Model Detailing</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Model Finishing and Delivery</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Laying out UVs</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Materials</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Textures</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Rigging for Animation</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Animation in Maya</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Dynamics in Maya</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Lighting</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Rendering</li>
+            </ul>
+            <ul class="list list-style-2">
+                <h1 class="secondary">MODULE 3: MODELING</h1>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Exploring the UI of Maya</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Exploring Types of Objects</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Creating Primitive Objects</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Exploring Viewport Modes</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Understanding the Pivot Point</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Polygon Modeling</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Understanding Polygon Geometry</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> NURBS Modeling</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Understanding a NURBS Curve</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Drawing and Modifying NURBS Curve</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Understanding a NURBS Surface</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Working with Booleans</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Products and Environment Modeling</li>
+            </ul>
+        </div>
+    </section>
+    <section class="moduleSection-1">
+        <div class="lists-2">
+            <ul class="list list-style-2">
+                <h1 class="secondary">MODULE 4. TEXTURING</h1>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Exploring Different Types of Materials</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Understanding Materials Attributes</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Working with Hypershade Window</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Texturing in Maya</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Different Types of Textures</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Advanced UV Texturing Mapping</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Shading and Texturing Surfaces in Maya</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Assigning Material to Surfaces</li>
+            </ul>
+            <ul class="list list-style-2">
+                <h1 class="secondary">MODULE 5. LIGHTING</h1>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Working with Different Types of Lighting</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Creating Light Effects in Maya</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Understanding Shadows and Mental Ray</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Exploring Rendering Nodes</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Mental Ray Attributes</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Various Camera Types</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Creating and Animation with Cameras</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Overview of Cameras Attributes</li>
+            </ul>
+
+        </div>
+    </section>
+    <section class="moduleSection-1">
+        <div class="lists-2">
+            <ul class="list list-style-2">
+                <h1 class="secondary">MODULE 6. RIGGING, SKINNING & EXPRESSIONS , ANIMATION</h1>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Rigging, Skinning &amp; Expressions, Animation</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Various Types of Animation Methods in Maya</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Maya Keyframe Animation</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Advanced Graph Editor Tips</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Camera Animation</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Attach an object to a Motion Path Animation?</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Rigging, Constraints, and Deformers</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Character Rigging and Animation</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> IK Spline Handle Tool</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Creating and Using Paint Effects</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Create a composite of Paint Effects strokes</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Exploring the Paint Effects Canvas</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> 2D-3D Canvas Techniques</li>
+            </ul>
+            <ul class="list list-style-2">
+                <li><i class='far fa-arrow-alt-circle-right'></i> Understanding Dynamics and Particle System</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Exploring Different Dynamic Systems</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Create nParticles in Maya</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Fluids Effects and Their Types</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> How to work with nHair?</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Creating and Editing nCloth</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Working with Types of Rendering Methods</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Software and Hardware Rendering</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Overview of Vector Rendering</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Setting up Render Using Mental Ray Rendering</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Rendering a Scene</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Working with Rendering Layers</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Exploring Render Nodes Reference Library</li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="form-section">
+        <div class="form-s-content">
+            <span class="form-section-span">instant inquiry</span>
+            <div class="input-div">
+                <input type="text" class="input name" placeholder="name">
+                <input type="email" class="input email" placeholder="email">
+                <input type="number" class="input password" placeholder="phone">
+                <div class="third-section-btn-div">
+                    <a href="#" class="third-s-btn">request call back</a>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+
+    <!-- <section class="descriptionMain">
+        <div class="descriptionDiv">
+            <ul class="nav nav-pills mb-3 tertiary" id="pills-tab" role="tablist">
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link active" id="pills-home-tab" data-bs-toggle="pill"
+                        data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home"
+                        aria-selected="true"><i class='far fa-caret-square-down'></i> Facilities &
+                        Features</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="pills-profile-tab" data-bs-toggle="pill"
+                        data-bs-target="#pills-profile" type="button" role="tab" aria-controls="pills-profile"
+                        aria-selected="false"><i class='far fa-caret-square-down'></i> Eligibility</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="pills-contact-tab" data-bs-toggle="pill"
+                        data-bs-target="#pills-contact" type="button" role="tab" aria-controls="pills-contact"
+                        aria-selected="false"><i class='far fa-caret-square-down'></i> Course Fee
+                        Includes</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="pills-last-tab" data-bs-toggle="pill" data-bs-target="#pills-last"
+                        type="button" role="tab" aria-controls="pills-last" aria-selected="false"><i
+                            class='far fa-caret-square-down'></i> Timings</button>
+                </li>
+            </ul>
+
+            <div class="tab-content tertiary" id="pills-tabContent">
+                <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
+                    <p>1. Honest Counselling : Choose the Right Course @ Right Price.<br> 2. Small Batches 7-10 Students
+                        leads to Personal Attention.<br> 3. 100% Practicals with Projects.<br> 4. Original, Leagal &amp;
+                        Official Software from Autodesk, Adobe.<br> 5. Industry Endrosed Cirriculum.<br> 6. Highly
+                        Trained, Experienced &amp; Certified Faculty.<br> 7. High Emphasis on Projects &amp;
+                        Assignments.<br> 8. Friendly, Supportive, Patient &amp; Qualified Faculty.<br> 9. Easy
+                        Installment Facility.</p>
+                </div>
+                <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
+
+
+                    <h4>Who Can Do This Course:</h4>
+                    <p>Civil, ITI, Architecture, Interior Design, Landscaping, Graduates, Diploma, Engineering
+                        Students.</p>
+                    <p><strong>More You Learn Less You Pay</strong><br> <strong>Professional Training – Take a Free
+                            DEMO</strong><br> <strong>Call 9833900330 / 9930375161</strong></p>
+
+
+
+                </div>
+                <div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab">
+                    <p><strong>Fees: Rs. 17,550 1?,550/-</strong></p>
+                    <p><strong>What do my Tuition Fees include?</strong><br> <strong>1. Course Book.</strong><br>
+                        <strong>2. GST Included.</strong><br> <strong>3. Certificate.</strong><br> <strong>4. Extra
+                            Practice/Computer Time.</strong><br> <strong>5. 100% Placement Assistance.</strong>
+                    </p>
+                </div>
+
+                <div class="tab-pane fade" id="pills-last" role="tabpanel" aria-labelledby="pills-last-tab">
+                    <p><strong>Morning</strong> Batches : 7:30-9am, 9-10am, 10-11am, 11-12pm<br>
+                        <strong>Afternoon</strong> Batches : 12-1pm, 1:30-2:45pm, 3-4pm, 4-5pm<br>
+                        <strong>Evening</strong> Batches : 5-6pm, 6-7pm.<br> <strong>Weekend</strong> &amp; <strong>Fast
+                            Track</strong> Batches are conducted.<br> Please call to confirm the Timings.<br>
+                        <strong>Daily &amp; Alternate Day</strong> batches are conducted.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section> -->
+    <div class="third-s-forth-card third-s-card">
+        <a class="third-section-card" href="..\multimedia_&_animation\multimedia&Animation.html">
+            <span class="courseName"
+                style="color: white;background-image: linear-gradient(to right bottom,rgb(241, 157, 0),rgb(255, 38, 0));">Tally-ERP</span>
+
+            <div class="third-section-image">
+                <img class="third-s-img" src="../assests/img/AnimationCourses/img1.jfif" alt="">
+            </div>
+            <div class="third-section-first-span">
+                <span class="third-s-first-span">diploma in 3D animation course</span>
+            </div>
+            <div class="third-second-second-span">
+                <span class="third-s-second-span">character modelling, VFX, visual effects sketching</span>
+            </div>
+
+        </a>
+        <a class="third-section-card" href="..\vfx\vfx.html">
+            <span class="courseName"
+                style="color: white;background-image: linear-gradient(to right bottom,rgb(255, 0, 0),rgb(247, 0, 255));">VFX</span>
+
+            <div class="third-section-image">
+                <img class="third-s-img" src="../assests/img/AnimationCourses/img2.jfif" alt="">
+            </div>
+            <div class="third-section-first-span">
+                <span class="third-s-first-span">VFX Visual Effects Course</span>
+            </div>
+            <div class="third-second-second-span">
+                <span class="third-s-second-span">VFX, Special Effects, Advanced Adobe After Effects</span>
+            </div>
+
+        </a>
+        <a class="third-section-card" href="..\character_modelling\characterModelling.html">
+            <span class="courseName"
+                style="color: white;background-image: linear-gradient(to right bottom,rgb(93, 0, 241),rgb(76, 0, 255));">Character
+                Modelling Course</span>
+
+
+            <div class="third-section-image">
+                <img class="third-s-img" src="../assests/img/AnimationCourses/img3.jfif" alt="">
+            </div>
+            <div class="third-section-first-span">
+                <span class="third-s-first-span">Character Modelling Course</span>
+            </div>
+            <div class="third-second-second-span">
+                <span class="third-s-second-span">Character Animation, Advanced Graphic, 3D MAX</span>
+            </div>
+
+        </a>
+        <a class="third-section-card" href="..\maya_3d_animaition\maya3dAnimaition.html">
+            <span class="courseName"
+                style="color: white;background-image: linear-gradient(to right bottom,green,rgb(51, 85, 51));">3D
+                Maya Animation</span>
+
+            <div class="third-section-image">
+                <img class="third-s-img" src="../assests/img/AnimationCourses/img4.jpg" alt="">
+            </div>
+            <div class="third-section-first-span">
+                <span class="third-s-first-span">3D Maya Animation Course</span>
+            </div>
+            <div class="third-second-second-span">
+                <span class="third-s-second-span">Maya Animation, Sketching, Rigging, Rendering, Lighting</span>
+            </div>
+
+        </a>
+    </div>
+
+
+    <div class="footer">
+        <div class="footerDiv">
+            <h3 class="fotterDiv-heading">address</h3>
+            <span class="footerDiv-span"><i class="fa fa-paper-plane-o"></i>1st Floor Roshan Complax, Gali Number 2,
+                near Evergreen Sweets, Mamura, Sector 66, Noida, Uttar Pradesh 201301.</span>
+            <span class="footerDiv-span"><i class="fa fa-phone"></i><a class="phoneNumberLink"
+                    href="tel:8826118037">8826118037</a> / <a class="phoneNumberLink"
+                    href="tel:9650173057">7053301150</a></span>
+            <span class="footerDiv-span"><i class="fa fa-envelope-o"></i><a class="emailAddressLink"
+                    href="mailTo:sunrisecomputernoida@gmail.com">sunrisecomputernoida@gmail.com</a></span>
+            <div class="footer-social-media">
+                <a href="https://facebook.com"><i class='fab fa-facebook'></i></a>
+                <a href="https://instagram.com"><i class='fab fa-instagram'></i></a>
+                <a href="https://twitter.com"><i class='fab fa-twitter'></i></a>
+                <a href="https://youtube.com"><i class='fab fa-youtube'></i></a>
+            </div>
+        </div>
+        <div class="footerDiv">
+            <h3 class="fotterDiv-heading">top Courses</h3>
+            <a class="footerDiv-link" href="../digital_marketing\digitalMarketing.html">digital marketing
+                courses</a>
+            <a class="footerDiv-link" href="../tally_erp_executive/tallyErpExecutive.html">tally-accounting
+                courses</a>
+            <a class="footerDiv-link" href="../autocad/autocad.html">autoCad marchitecture courses</a>
+            <a class="footerDiv-link" href="../maya_3d_animaition/maya3dAnimaition.html">3d max diploma courses</a>
+            <a class="footerDiv-link" href="../graphic_designing/graphicDesigning.html">graphic design courses</a>
+        </div>
+        <div class="footerDiv">
+            <h3 class="fotterDiv-heading">other courses</h3>
+            <a class="footerDiv-link" href="../revit_architecture/revitArchitecture.html">revit architecute
+                courses</a>
+            <a class="footerDiv-link" href="../web_designing/webdesigning.html">website desigining courses</a>
+            <a class="footerDiv-link" href="../multimedia_&_animation/multimedia&Animation.html">master multimedia
+                Courses</a>
+            <a class="footerDiv-link" href="../maya_3d_animaition/maya3dAnimaition.html">3D animation Courses</a>
+            <a class="footerDiv-link" href="../fashion_designing/fashionDesigning.html">fashion desigining
+                courses</a>
+            courses</a>
+        </div>
+
+
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+        crossorigin="anonymous"></script>
+    <script src="../navigation-bar.js"></script>
+    <script src="../button.js"></script>
+</body>
+
+</html>

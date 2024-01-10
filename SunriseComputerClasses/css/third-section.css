@@ -1,0 +1,120 @@
+.third-s-heading {
+    text-align: center;
+    padding: 20px;
+}
+
+a:hover {
+    color: white;
+}
+
+.third-s-h {
+    font-size: 40px;
+    font-weight: 500;
+    color: grey;
+}
+
+.third-s-card {
+    padding: 50px;
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-columns: 300px 300px 300px 300px;
+    justify-content: center;
+    justify-items: center;
+    background-color: white;
+    column-gap: 50px;
+}
+
+.third-s-img {
+    overflow: hidden;
+    width: 100%;
+    height: 170px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.third-section-card {
+    text-decoration: none;
+    border: 2px solid #eee;
+    padding-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    background-color: #eee;
+    border-radius: 10px;
+    transition: all .3s;
+    position: relative;
+}
+
+.third-section-card:hover {
+    transform: translateY(-10px);
+}
+
+.third-s-first-span,
+.third-s-second-span {
+    text-align: center;
+}
+
+
+.third-s-first-span {
+    display: block;
+    text-transform: capitalize;
+    color: rgb(0, 0, 0);
+    font-family: lato;
+    font-size: 30px;
+    font-weight: 600;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.third-s-second-span {
+    display: block;
+    text-transform: capitalize;
+    color: rgb(0, 0, 0);
+    font-family: lato;
+    font-size: 20px;
+    font-weight: 400;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.courseName {
+    position: absolute;
+    background-color: black;
+    color: rgb(255, 255, 255);
+    padding: 5px;
+    font-size: 20px;
+    background-image: linear-gradient(to right bottom, rgb(0, 0, 255), rgb(0, 183, 255));
+    right: 0;
+    top: 125px;
+    text-transform: capitalize;
+}
+
+@media (max-width:1350px) {
+    .third-s-card {
+        padding: 50px;
+        display: grid;
+        grid-template-rows: auto auto;
+        grid-template-columns: 300px 300px;
+        justify-content: center;
+        justify-items: center;
+        background-color: white;
+        column-gap: 100px;
+        row-gap: 50px;
+    }
+}
+
+
+@media (max-width:720px) {
+    .third-s-card {
+        padding: 50px;
+        display: grid;
+        grid-template-rows: auto auto auto auto;
+        grid-template-columns: 300px;
+        justify-content: center;
+        justify-items: center;
+        background-color: white;
+        column-gap: 100px;
+        row-gap: 50px;
+    }
+}

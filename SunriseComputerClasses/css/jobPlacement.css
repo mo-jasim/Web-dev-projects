@@ -1,0 +1,120 @@
+.jobP-image {
+    width: 180px;
+}
+
+.jobPlacement {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    padding: 50px 10px;
+    box-sizing: border-box;
+}
+
+.jobPlacement-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: justify;
+}
+
+.jobPlacement-heading {
+    font-size: 30px;
+    text-transform: capitalize;
+    font-weight: 600;
+}
+
+.jobPlacement-line {
+    font-size: 25px;
+    font-weight: 400;
+}
+
+.jobPlacement-image {
+    display: grid;
+    grid-template-rows: auto auto;
+    gap: 50px;
+    grid-template-columns: 200px 200px 200px 200px 200px;
+    align-items: center;
+}
+
+@media (max-width:1220px) {
+
+    .jobPlacement-image {
+        display: grid;
+        grid-template-rows: auto auto;
+        gap: 30px;
+        grid-template-columns: 150px 150px 150px 150px 150px;
+        align-items: center;
+    }
+
+    .jobP-image {
+        width: 150px;
+    }
+
+}
+
+@media (max-width:880px) {
+    .jobPlacement-image {
+        display: grid;
+        grid-template-rows: auto auto;
+        gap: 30px;
+        grid-template-columns: 100px 100px 100px 100px 100px;
+        align-items: center;
+    }
+
+    .jobP-image {
+        width: 100px;
+    }
+
+}
+
+
+
+@media (max-width:620px) {
+    .jobPlacement-image {
+        display: grid;
+        grid-template-rows: auto auto;
+        gap: 20px;
+        grid-template-columns: 80px 80px 80px 80px 80px;
+        align-items: center;
+    }
+
+    .jobP-image {
+        width: 80px;
+    }
+
+}
+
+@media (max-width:500px) {
+    .jobPlacement-image {
+        display: grid;
+        grid-template-rows: auto auto;
+        gap: 20px;
+        grid-template-columns: 60px 60px 60px 60px 60px;
+        align-items: center;
+    }
+
+    .jobP-image {
+        width: 60px;
+    }
+
+}
+
+@media (max-width:400px) {
+    .jobPlacement-image {
+        display: grid;
+        grid-template-rows: auto auto;
+        gap: 20px;
+        grid-template-columns: 45px 45px 45px 45px 45px;
+        align-items: center;
+    }
+
+    .jobP-image {
+        width: 45px;
+    }
+
+    .jobPlacement-line {
+        font-size: 20px;
+    }
+
+}

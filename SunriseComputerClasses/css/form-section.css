@@ -1,0 +1,65 @@
+.form-section-span {
+    /* position: absolute; */
+    font-size: 40px;
+    font-weight: 500;
+    font-family: Helvetica, sans-serif;
+    color: white;
+    text-transform: capitalize;
+}
+
+.input-div {
+    display: flex;
+    gap: 20px;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+}
+
+.form-section {
+    display: flex;
+    align-items: center;
+    background-color: rgb(46, 14, 105);
+}
+
+.form-s-content {
+    padding: 30px;
+    gap: 20px;
+    display: flex;
+    flex-direction: column;
+    align-content: flex-start;
+    justify-content: flex-start;
+    width: fit-content;
+    margin: 0 auto;
+}
+
+.input {
+    border: 0;
+    outline: 0;
+    padding: 10px;
+    background-color: #eee;
+    font-size: 20px;
+    border-radius: 5px;
+}
+
+.third-section-btn-div {
+    padding: 10px;
+    background-color: rgb(96, 27, 146);
+    width: fit-content;
+    border-radius: 10px;
+}
+
+.third-section-btn-div:hover {
+    background-color: rgb(142, 51, 207);
+
+}
+
+.third-section-btn-div:hover .third-s-btn {
+    color: white;
+
+}
+
+.third-s-btn {
+    font-size: 20px;
+    color: white;
+    text-decoration: none;
+    text-transform: capitalize;
+}

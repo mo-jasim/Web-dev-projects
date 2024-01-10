@@ -1,0 +1,757 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/29c2b75804.js" crossorigin="anonymous"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/first_section.css">
+    <link rel="stylesheet" href="../css/third-section.css">
+    <link rel="stylesheet" href="../css/form-section.css">
+    <link rel="stylesheet" href="../css/footer.css">
+    <title>Document</title>
+</head>
+<style>
+    * {
+        box-sizing: border-box;
+        padding: 0;
+        margin: 0;
+    }
+
+    .header {
+        display: flex;
+        height: 80vh;
+        flex-direction: row;
+    }
+
+    .primary {
+        font-size: 60px;
+    }
+
+    .secondary {
+        font-size: 40px;
+    }
+
+    .tertiary {
+        font-size: 20px;
+    }
+
+    .textContent {
+        color: white;
+        text-transform: capitalize;
+        font-style: italic;
+    }
+
+    .section {
+        width: 60%;
+        height: 100%;
+    }
+
+    .left {
+        background-image: linear-gradient(to right bottom, transparent, rgba(0, 0, 0, 0.8) 100%), url(../assests/img/background-image5.jpg);
+        background-size: cover;
+        position: relative;
+
+    }
+
+    .textContainer {
+        text-align: center;
+        width: 50%;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .right {
+        background-color: #eee;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .list {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .list-style-1 {
+        list-style: none;
+        font-size: 30px;
+    }
+
+    .list-style-2 {
+        list-style: none;
+        font-size: 25px;
+    }
+
+    .fa-arrow-alt-circle-right {
+        /* background-image: linear-gradient(to right, rgb(255, 196, 1), rgb(255, 172, 48));
+        color: transparent;
+        background-clip: text;
+        -webkit-background-clip: text; */
+        background-image: linear-gradient(to right bottom, rgb(255, 0, 0), rgb(111, 0, 255));
+        color: transparent;
+        background-clip: text;
+        -webkit-background-clip: text;
+    }
+
+    .moduleSection-1,
+    .moduleSection-2 {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        padding: 20px;
+    }
+
+    .moduleSection-1 h1,
+    .moduleSection-2 h1 {
+        background-image: linear-gradient(to right, rgb(255, 0, 0), rgb(111, 0, 255));
+        color: transparent;
+        background-clip: text;
+        -webkit-background-clip: text;
+        font-size: 30px;
+        text-align: center;
+        font-style: italic;
+
+    }
+
+    .lists-4 {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: auto;
+    }
+
+    .lists-2 {
+        display: grid;
+        grid-template-columns: repeat(2, auto);
+        grid-template-rows: auto;
+        justify-content: space-evenly;
+    }
+
+    .descriptionMain {
+        width: 100%;
+        height: fit-content;
+    }
+
+    .descriptionDiv {
+        width: 70%;
+        height: fit-content;
+        margin: 0 auto;
+        padding: 20px;
+    }
+
+    .nav-pills {
+        justify-content: space-between;
+        background-color: #eee;
+    }
+
+    @media (max-width:1250px) {
+        .lists-4 {
+            grid-template-columns: repeat(2, auto);
+        }
+    }
+
+    @media (max-width:1050px) {
+        .descriptionDiv {
+            width: 100%;
+        }
+    }
+
+    @media (max-width: 700px) {
+        .header {
+            flex-direction: column;
+            height: max-content;
+        }
+
+        .section {
+            width: 100%;
+        }
+
+        .left {
+            height: 80vh;
+        }
+
+        .textContainer {
+
+            width: 100%;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+    }
+
+    @media (max-width:450px) {
+
+        .lists-2,
+        .lists-4 {
+            grid-template-columns: repeat(1, auto);
+        }
+
+    }
+
+    @media (max-width:350px) {
+
+        .lists-2,
+        .lists-4 {
+            grid-template-columns: repeat(1, auto);
+        }
+    }
+</style>
+
+<body>
+    <div class="contact-navbar">
+        <div class="contact-info">
+            <i class="fa fa-phone"></i>
+            <span class="phoneNumber">Sunrise Computer Classes : <a class="phoneNumberLink"
+                    href="tel:8826118037">8826118037</a>
+                , <a class="phoneNumberLink" href="tel:9650173057">7053301150</a></span>
+            <i class="fa fa-envelope-o"></i>
+            <span class="emailId"><a class="emailAddressLink"
+                    href="mailTo:sunrisecomputernoida@gmail.com">sunrisecomputernoida@gmail.com</a></span>
+        </div>
+        <div class="social-media-links">
+            <a href="https://www.facebook.com/Sunrisecarrier/?ref=bookmarks">
+                <i class="fab fa-facebook"></i>
+            </a>
+            <a href="https://www.instagram.com/sunriseclassesnoida1/">
+                <i class="fab fa-instagram"></i>
+            </a>
+            <a href="https://twitter.com/ClassesNoida">
+                <i class="fab fa-twitter"></i>
+            </a>
+            <a href="https://www.youtube.com/channel/UCQeoMZErJ4ENUl3VM_f78Mg/featured?view_as=subscriber">
+                <i class="fab fa-youtube"></i>
+            </a>
+        </div>
+    </div>
+    <nav class="navigation-bar sticky-top">
+        <a href="../computer.html"><img class="logo-image" src="../assests/img/logo.jpg" alt=""></a>
+        <div class="open-nav-button">
+            <i class="fa fa-bars"></i>
+        </div>
+        <div class="nav-box">
+            <a class="navigation-bar-link" href="../computer.html">home</a>
+
+            <a class="dropdown">
+                <a class="dropdown-toggle navigation-bar-link" type="button" id="dropdownMenuButton1"
+                    data-bs-toggle="dropdown" aria-expanded="false">
+                    tally & excel
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                    <li><a class="dropdown-item" href="../advance_excel/AdvanceExcel.html">advance excel</a></li>
+                    <li><a class="dropdown-item" href="../tally_erp_executive/tallyErpExecutive.html">tally erp
+                            executive</a></li>
+                    <li><a class="dropdown-item" href="../tally_erp_operations/tallyErpOperations.html">tally erp
+                            operations</a></li>
+
+                </ul>
+            </a>
+            <a class="dropdown">
+                <a class="dropdown-toggle navigation-bar-link" type="button" id="dropdownMenuButton1"
+                    data-bs-toggle="dropdown" aria-expanded="false">
+                    graphic & web
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                    <li><a class="dropdown-item" href="../web_designing/webdesigning.html">advance diploma in web
+                            designing</a></li>
+                    <li><a class="dropdown-item" href="../graphic_designing/graphicDesigning.html">advance diploma in
+                            graphic designing</a></li>
+                    <li><a class="dropdown-item" href="../photoshop/photoshop.html">advance photoshop course</a></li>
+
+                </ul>
+            </a>
+            <a class="dropdown">
+                <a class="dropdown-toggle navigation-bar-link" type="button" id="dropdownMenuButton1"
+                    data-bs-toggle="dropdown" aria-expanded="false">
+                    animation
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                    <li><a class="dropdown-item" href="../multimedia_&_animation/multimedia&Animation.html">1 year
+                            multimedia & animation</a></li>
+                    <li><a class="dropdown-item" href="../maya_3d_animaition/maya3dAnimaition.html">maya 3d animaition
+                            course</a></li>
+                    <li><a class="dropdown-item"
+                            href="../Premeire_Pro_Video_Editing_Course/PremeireProVideoEditingCourse.html">premeire pro
+                            video editing course</a></li>
+                    <li><a class="dropdown-item" href="../character_modelling/characterModelling.html">character
+                            modelling
+                            course</a></li>
+                    <li><a class="dropdown-item" href="../vfx/vfx.html">vfx visual effects & video course</a></li>
+                </ul>
+            </a>
+            <a class="dropdown">
+                <a class="dropdown-toggle navigation-bar-link" type="button" id="dropdownMenuButton1"
+                    data-bs-toggle="dropdown" aria-expanded="false">
+                    architecture
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                    <li><a class="dropdown-item" href="../autocad/autocad.html">autocad 2d & 3d</a></li>
+                    <li><a class="dropdown-item" href="../revit_architecture/revitArchitecture.html">diploma in revit
+                            architecture</a></li>
+                    <li><a class="dropdown-item" href="../3d_max/3dMax.html">3d max course</a></li>
+                    <li><a class="dropdown-item" href="../revit_mep/Revit mep.html">revit mep</a></li>
+                </ul>
+            </a>
+
+            <a class="dropdown">
+                <a class="dropdown-toggle navigation-bar-link" type="button" id="dropdownMenuButton1"
+                    data-bs-toggle="dropdown" aria-expanded="false">
+                    digital marketing
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                    <li><a class="dropdown-item" href="../digital_marketing/digitalMarketing.html">digital marketing
+                            course
+                            - top rated</a></li>
+
+                    <li><a class="dropdown-item" href="../internet_marketing/internetMarketing.html">1 year master in
+                            internet marketing course</a></li>
+                </ul>
+            </a>
+
+            <div class="close-nav-button">
+                <i class="fa fa-times"></i>
+            </div>
+            <span class="icons">
+                <a href="https://facebook.com"><i class="fab fa-facebook"></i></a>
+                <a href="https://instagram.com"><i class="fab fa-instagram"></i></a>
+                <a href="https://twitter.com"><i class="fab fa-twitter"></i></a>
+                <a href="https://youtube.com"><i class="fab fa-youtube"></i></a>
+            </span>
+        </div>
+    </nav>
+
+    <header class="header">
+        <button onclick="topFunction()" id="goToTopBtn" class="goToTopBtn" title="Go to top">
+            <i class='fas fa-arrow-circle-up'></i>
+        </button>
+        <div class="section left">
+            <div class="textContainer">
+                <span class="textContent secondary">
+                    Advanced Digital Marketing Diploma Course
+                    Fees: Rs. <s>45,550</s> 26,500/-
+                </span>
+            </div>
+        </div>
+        <div class="section right">
+            <ul class="list-style-1 list">
+
+
+                <li><i class='far fa-arrow-alt-circle-right'></i> Fees: Rs. <s>45,550</s> 26,500</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Duration: 2-3 Months</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Work on Projects &amp; Assignments</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> All Inclusive of Books, Certification, and GST</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> 25 Modules, 100% Job Assistance</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Fast-Track Batches Available</li>
+
+            </ul>
+        </div>
+    </header>
+
+    <section class="form-section">
+        <div class="form-s-content">
+            <span class="form-section-span">instant inquiry</span>
+            <div class="input-div">
+                <input type="text" class="input name" placeholder="name">
+                <input type="email" class="input email" placeholder="email">
+                <input type="number" class="input password" placeholder="phone">
+                <div class="third-section-btn-div">
+                    <a href="#" class="third-s-btn">request call back</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="moduleSection-1">
+        <div class="lists-2">
+            <ul class="list list-style-2">
+                <h1 class="secondary">1. Search Engine Optimization (SEO)</h1>
+                Learn Advance On Page & Off-Page Optimization, Keyword Research, Website Auditing, Competitor Analysis,
+                Directory links, Forums,#1 Rank Top of Search Engines.
+            </ul>
+            <ul class="list list-style-2">
+                <h1 class="secondary">2. Social Media Marketing (SMM)</h1>
+                Social Media Marketing & Optimization, Facebook Marketing, Create You Tube Ads, Marketing on YouTube,
+                Twitter, LinkedIn, Pinterest, Instagram.
+            </ul>
+        </div>
+    </section>
+
+    <section class="moduleSection-1">
+        <div class="lists-2">
+            <ul class="list list-style-2">
+                <h1 class="secondary">3. Google Adwords + Certification</h1>
+                Setup PPC Campaign, GOOGLE Adwords, “Click-through-rates” CTR, Quality Score, Bid Management, Search,
+                Display & Video Networks.
+            </ul>
+            <ul class="list list-style-2">
+                <h1 class="secondary">4. Advanced Adwords MCC</h1>
+                Merchant Client Centre, Campaign Performance Reports, Large Advertisers with more than one Adwords
+                Account, Create Levels.
+            </ul>
+        </div>
+    </section>
+
+    <section class="moduleSection-1">
+        <div class="lists-2">
+            <ul class="list list-style-2">
+                <h1 class="secondary">5. Remarketing / Conversion</h1>
+                Remarketing & Conversions With Adv. Google Adwords, Standard & Dynamic Remarketing, Show Ads To Your
+                Past Visitors, Display Network Websites.
+            </ul>
+            <ul class="list list-style-2">
+                <h1 class="secondary">6. Google Analytics</h1>
+
+                Web Analytics, Reports & Interface, Auto Emailing Report, Advertising Analytics, Webmaster Tools
+                Analytics, Conversion Tracking, Calculating ROI.
+            </ul>
+        </div>
+    </section>
+
+    <section class="moduleSection-1">
+        <div class="lists-2">
+            <ul class="list list-style-2">
+                <h1 class="secondary">7. Mobile Marketing</h1>
+                Adwords Mobile Marketing, Marketing on Mobile Apps is a very important Marketing Tool, you learn to
+                market on android as well as IOS Platform.
+            </ul>
+            <ul class="list list-style-2">
+                <h1 class="secondary">8. Google Adsense</h1>
+                Google Adsense – Monetization Google AdSense, A platform by Google through Which you can earn money by
+                placing ads on your blog/website.
+            </ul>
+        </div>
+    </section>
+    <section class="moduleSection-1">
+        <div class="lists-2">
+            <ul class="list list-style-2">
+                <h1 class="secondary">9. Email Marketing</h1>
+                Marketing commercial message to group of people. Create Newsletters with Various Themes, using email to
+                send ads, request business & brand awareness.
+            </ul>
+            <ul class="list list-style-2">
+                <h1 class="secondary">10. ORM Online Reputation Mg</h1>
+                Online Reputation Management, Reputation Management Companies, how to Remove & over lap the Negative
+                Complaints or using SEO Tactics.
+            </ul>
+
+        </div>
+    </section>
+    <section class="moduleSection-1">
+        <div class="lists-2">
+            <ul class="list list-style-2">
+                <h1 class="secondary">11. Google Webmaster Tools</h1>
+                Manage & Monitor Your Site, Search Traffic, Google Index, Crawl & Fetching, Submitting Verification
+                Code, Testing Robot.txt & Sitemaps, Security.
+            </ul>
+            <ul class="list list-style-2">
+                <h1 class="secondary">12. Content Marketing</h1>
+                Content Marketing With Infographcis. An Infographic that is Linked & Compelling by its Nature will Drive
+                Traffic, induce “Share” & “Click”.
+            </ul>
+        </div>
+    </section>
+    <section class="moduleSection-1">
+        <div class="lists-2">
+            <ul class="list list-style-2">
+                <h1 class="secondary">13. Digital Marketing Strategies</h1>
+                Start a Digital Marketing Agency, How to Get Clients & Strategies to convert, How to Pitch, Target
+                Oriented Marketing, Impress with Analytics.
+            </ul>
+            <ul class="list list-style-2">
+                <h1 class="secondary">14. Creating a BLOG</h1>
+                Steps to Blog Marketing Success, Create Your Blog, Customize Your Blog – Be Professional, Getting the
+                Word Out, Marketing Tools
+            </ul>
+        </div>
+    </section>
+    <section class="form-section">
+        <div class="form-s-content">
+            <span class="form-section-span">instant inquiry</span>
+            <div class="input-div">
+                <input type="text" class="input name" placeholder="name">
+                <input type="email" class="input email" placeholder="email">
+                <input type="number" class="input password" placeholder="phone">
+                <div class="third-section-btn-div">
+                    <a href="#" class="third-s-btn">request call back</a>
+                </div>
+            </div>
+        </div>
+
+    </section>
+    <section class="moduleSection-1">
+        <div class="lists-2">
+            <ul class="list list-style-2">
+                <h1 class="secondary">15. Media Buying & Selling</h1> Benefits 7 Advantages. profitable Media Buying
+                Campaign from start to finish,
+                different formats such as banner ads, text ads and video ads, Media Buying for Business.
+            </ul>
+            <ul class="list list-style-2">
+                <h1 class="secondary">16. List Building Techniques</h1>
+                How to Design Page For Maximum Conversions, Split Testing Squeeze Pages, Setting up your Broadcast
+                Schedule, Launching List Building Campaign
+            </ul>
+        </div>
+    </section>
+    <section class="moduleSection-1">
+        <div class="lists-2">
+            <ul class="list list-style-2">
+                <h1 class="secondary">17. Webinar Marketing</h1>Logistics, Direct interaction, feedback, tools &
+                services, platforms. Webinar for Business, promotion of products. Apply the Top Webinar Marketing Tools.
+            </ul>
+            <ul class="list list-style-2">
+                <h1 class="secondary">18. Affiliate Marketing</h1>
+                Affiliate Marketing – Earning a Commission by Promoting other Company’s Products. How to Earn Commission
+                from Amazon, Flipkart, Myntra Jabong..etc.
+            </ul>
+        </div>
+    </section>
+
+    <section class="moduleSection-1">
+        <div class="lists-2">
+            <ul class="list list-style-2">
+                <h1 class="secondary">19. Lead Generation Business</h1>Converting Leads Online & Targeting them into
+                Paying Customers, High Converting Pages, Create your ‘Bribe’ Offer.
+            </ul>
+            <ul class="list list-style-2">
+                <h1 class="secondary">20. Freelancing Techniques</h1>
+                Freelancing Basics, Freelancing Websites, Best Practices For Freelancing, Applying For Online Jobs,
+                Forums Accepting Payments Online
+            </ul>
+        </div>
+    </section>
+    <section class="moduleSection-1">
+        <div class="lists-2">
+            <ul class="list list-style-2">
+                <h1 class="secondary">21. Design Graphics</h1>Graphics effectively communicate, Visual presentations of
+                information. Create your own graphic for clients and Social media.
+            </ul>
+            <ul class="list list-style-2">
+                <h1 class="secondary">22. Landing Page Techniques</h1>
+                Elements Of Landing Page, Acquiring Stunning, Landing Pages, WordPress Themes, CTA Placement &
+                Optimization, Landing Page from third party sites.
+            </ul>
+        </div>
+    </section>
+    <section class="moduleSection-1">
+        <div class="lists-2">
+            <ul class="list list-style-2">
+                <h1 class="secondary">23. Video Creation</h1>Make beautiful videos, online easily, how to make travel
+                movies, wedding videos, promo ads, property virtual tours, clips, music,. create professional Quality
+                Videos.
+            </ul>
+            <ul class="list list-style-2">
+                <h1 class="secondary">24. Digital SUBSCRIPTION</h1>
+                Access to Online Digital Library 3 MONTH “Gold Subscription” to 25 Modules+ Catch up on missed lectures
+                or Revise Forgotten Modules – ***WORTH Rs. 12,550/-
+            </ul>
+        </div>
+    </section>
+    <section class="moduleSection-1">
+        <div class="lists-2">
+            <ul class="list list-style-2">
+                <h1 class="secondary">25. Top #5 Digital Marketing Tools for Online Business</h1>
+                <li><i class='far fa-arrow-alt-circle-right'></i> #1 TOOL SOCIAL MEDIA MANAGEMENT SYSTEM for brand
+                    management</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> #2 TOOL LEARN FROM EXTRA 21 E-BOOKS &amp; VIDEOS</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> #3 TOOL Get VIDEO TRAINING – latest trend on Digital
+                    platform.</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> #4 TOOL WhatsApp Video Training – WHATSAPP for
+                    BUSINESS</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> #5 TOOL Learn a LEAD Generation Tool – to get more
+                    Conversions</li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="descriptionMain">
+        <div class="descriptionDiv">
+            <ul class="nav nav-pills mb-3 tertiary" id="pills-tab" role="tablist">
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link active" id="pills-home-tab" data-bs-toggle="pill"
+                        data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home"
+                        aria-selected="true"><i class='far fa-caret-square-down'></i> Facilities &
+                        Features</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="pills-profile-tab" data-bs-toggle="pill"
+                        data-bs-target="#pills-profile" type="button" role="tab" aria-controls="pills-profile"
+                        aria-selected="false"><i class='far fa-caret-square-down'></i> Eligibility</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="pills-contact-tab" data-bs-toggle="pill"
+                        data-bs-target="#pills-contact" type="button" role="tab" aria-controls="pills-contact"
+                        aria-selected="false"><i class='far fa-caret-square-down'></i> Course Fee
+                        Includes</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="pills-last-tab" data-bs-toggle="pill" data-bs-target="#pills-last"
+                        type="button" role="tab" aria-controls="pills-last" aria-selected="false"><i
+                            class='far fa-caret-square-down'></i> Timings</button>
+                </li>
+            </ul>
+
+            <div class="tab-content tertiary" id="pills-tabContent">
+                <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
+                    <p>1. Honest Counselling : Choose the Right Course @ Right Price.<br> 2. Small Batches 7-10 Students
+                        leads to Personal Attention.<br> 3. 100% Practicals with Projects.<br> 4. Original, Leagal &amp;
+                        Official Software from Autodesk, Adobe.<br> 5. Industry Endrosed Cirriculum.<br> 6. Highly
+                        Trained, Experienced &amp; Certified Faculty.<br> 7. High Emphasis on Projects &amp;
+                        Assignments.<br> 8. Friendly, Supportive, Patient &amp; Qualified Faculty.<br> 9. Easy
+                        Installment Facility.</p>
+                </div>
+                <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
+
+
+                    <h4>Who Can Do This Course:</h4>
+                    <p>Civil, ITI, Architecture, Interior Design, Landscaping, Graduates, Diploma, Engineering
+                        Students.</p>
+                    <p><strong>More You Learn Less You Pay</strong><br> <strong>Professional Training – Take a Free
+                            DEMO</strong><br> <strong>Call 9833900330 / 9930375161</strong></p>
+
+
+
+                </div>
+                <div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab">
+                    <p><strong>Fees: Rs. 17,550 1?,550/-</strong></p>
+                    <p><strong>What do my Tuition Fees include?</strong><br> <strong>1. Course Book.</strong><br>
+                        <strong>2. GST Included.</strong><br> <strong>3. Certificate.</strong><br> <strong>4. Extra
+                            Practice/Computer Time.</strong><br> <strong>5. 100% Placement Assistance.</strong>
+                    </p>
+                </div>
+
+                <div class="tab-pane fade" id="pills-last" role="tabpanel" aria-labelledby="pills-last-tab">
+                    <p><strong>Morning</strong> Batches : 7:30-9am, 9-10am, 10-11am, 11-12pm<br>
+                        <strong>Afternoon</strong> Batches : 12-1pm, 1:30-2:45pm, 3-4pm, 4-5pm<br>
+                        <strong>Evening</strong> Batches : 5-6pm, 6-7pm.<br> <strong>Weekend</strong> &amp; <strong>Fast
+                            Track</strong> Batches are conducted.<br> Please call to confirm the Timings.<br>
+                        <strong>Daily &amp; Alternate Day</strong> batches are conducted.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="third-s-forth-card third-s-card">
+        <a class="third-section-card" href="..\multimedia_&_animation\multimedia&Animation.html">
+            <span class="courseName"
+                style="color: white;background-image: linear-gradient(to right bottom,rgb(241, 157, 0),rgb(255, 38, 0));">Tally-ERP</span>
+
+            <div class="third-section-image">
+                <img class="third-s-img" src="../assests/img/AnimationCourses/img1.jfif" alt="">
+            </div>
+            <div class="third-section-first-span">
+                <span class="third-s-first-span">diploma in 3D animation course</span>
+            </div>
+            <div class="third-second-second-span">
+                <span class="third-s-second-span">character modelling, VFX, visual effects sketching</span>
+            </div>
+
+        </a>
+        <a class="third-section-card" href="..\vfx\vfx.html">
+            <span class="courseName"
+                style="color: white;background-image: linear-gradient(to right bottom,rgb(255, 0, 0),rgb(247, 0, 255));">VFX</span>
+
+            <div class="third-section-image">
+                <img class="third-s-img" src="../assests/img/AnimationCourses/img2.jfif" alt="">
+            </div>
+            <div class="third-section-first-span">
+                <span class="third-s-first-span">VFX Visual Effects Course</span>
+            </div>
+            <div class="third-second-second-span">
+                <span class="third-s-second-span">VFX, Special Effects, Advanced Adobe After Effects</span>
+            </div>
+
+        </a>
+        <a class="third-section-card" href="..\character_modelling\characterModelling.html">
+            <span class="courseName"
+                style="color: white;background-image: linear-gradient(to right bottom,rgb(93, 0, 241),rgb(76, 0, 255));">Character
+                Modelling Course</span>
+
+
+            <div class="third-section-image">
+                <img class="third-s-img" src="../assests/img/AnimationCourses/img3.jfif" alt="">
+            </div>
+            <div class="third-section-first-span">
+                <span class="third-s-first-span">Character Modelling Course</span>
+            </div>
+            <div class="third-second-second-span">
+                <span class="third-s-second-span">Character Animation, Advanced Graphic, 3D MAX</span>
+            </div>
+
+        </a>
+        <a class="third-section-card" href="..\maya_3d_animaition\maya3dAnimaition.html">
+            <span class="courseName"
+                style="color: white;background-image: linear-gradient(to right bottom,green,rgb(51, 85, 51));">3D
+                Maya Animation</span>
+
+            <div class="third-section-image">
+                <img class="third-s-img" src="../assests/img/AnimationCourses/img4.jpg" alt="">
+            </div>
+            <div class="third-section-first-span">
+                <span class="third-s-first-span">3D Maya Animation Course</span>
+            </div>
+            <div class="third-second-second-span">
+                <span class="third-s-second-span">Maya Animation, Sketching, Rigging, Rendering, Lighting</span>
+            </div>
+
+        </a>
+    </div>
+
+
+    <div class="footer">
+        <div class="footerDiv">
+            <h3 class="fotterDiv-heading">address</h3>
+            <span class="footerDiv-span"><i class="fa fa-paper-plane-o"></i>1st Floor Roshan Complax, Gali Number 2,
+                near Evergreen Sweets, Mamura, Sector 66, Noida, Uttar Pradesh 201301.</span>
+            <span class="footerDiv-span"><i class="fa fa-phone"></i><a class="phoneNumberLink"
+                    href="tel:8826118037">8826118037</a> / <a class="phoneNumberLink"
+                    href="tel:9650173057">7053301150</a></span>
+            <span class="footerDiv-span"><i class="fa fa-envelope-o"></i><a class="emailAddressLink"
+                    href="mailTo:sunrisecomputernoida@gmail.com">sunrisecomputernoida@gmail.com</a></span>
+            <div class="footer-social-media">
+                <a href="https://facebook.com"><i class='fab fa-facebook'></i></a>
+                <a href="https://instagram.com"><i class='fab fa-instagram'></i></a>
+                <a href="https://twitter.com"><i class='fab fa-twitter'></i></a>
+                <a href="https://youtube.com"><i class='fab fa-youtube'></i></a>
+            </div>
+        </div>
+        <div class="footerDiv">
+            <h3 class="fotterDiv-heading">top Courses</h3>
+            <a class="footerDiv-link" href="../digital_marketing\digitalMarketing.html">digital marketing
+                courses</a>
+            <a class="footerDiv-link" href="../tally_erp_executive/tallyErpExecutive.html">tally-accounting
+                courses</a>
+            <a class="footerDiv-link" href="../autocad/autocad.html">autoCad marchitecture courses</a>
+            <a class="footerDiv-link" href="../maya_3d_animaition/maya3dAnimaition.html">3d max diploma courses</a>
+            <a class="footerDiv-link" href="../graphic_designing/graphicDesigning.html">graphic design courses</a>
+        </div>
+        <div class="footerDiv">
+            <h3 class="fotterDiv-heading">other courses</h3>
+            <a class="footerDiv-link" href="../revit_architecture/revitArchitecture.html">revit architecute
+                courses</a>
+            <a class="footerDiv-link" href="../web_designing/webdesigning.html">website desigining courses</a>
+            <a class="footerDiv-link" href="../multimedia_&_animation/multimedia&Animation.html">master multimedia
+                Courses</a>
+            <a class="footerDiv-link" href="../maya_3d_animaition/maya3dAnimaition.html">3D animation Courses</a>
+            <a class="footerDiv-link" href="../fashion_designing/fashionDesigning.html">fashion desigining
+                courses</a>
+            courses</a>
+        </div>
+
+
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+        crossorigin="anonymous"></script>
+    <script src="../navigation-bar.js"></script>
+    <script src="../button.js"></script>
+</body>
+
+</html>

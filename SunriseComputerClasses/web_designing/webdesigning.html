@@ -1,0 +1,929 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/29c2b75804.js" crossorigin="anonymous"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/first_section.css">
+    <link rel="stylesheet" href="../css/third-section.css">
+    <link rel="stylesheet" href="../css/form-section.css">
+    <link rel="stylesheet" href="../css/footer.css">
+    <title>Document</title>
+</head>
+<style>
+    * {
+        box-sizing: border-box;
+        padding: 0;
+        margin: 0;
+    }
+
+    .header {
+        display: flex;
+        height: 80vh;
+        flex-direction: row;
+    }
+
+    .primary {
+        font-size: 60px;
+    }
+
+    .secondary {
+        font-size: 40px;
+    }
+
+    .tertiary {
+        font-size: 20px;
+    }
+
+    .textContent {
+        color: white;
+        text-transform: capitalize;
+        font-style: italic;
+    }
+
+    .section {
+        width: 50%;
+        height: 100%;
+    }
+
+    .left {
+        background-image: linear-gradient(to right bottom, transparent, rgba(0, 0, 0, 0.8) 100%), url(../assests/img/background_image2.jpg);
+        background-size: cover;
+        position: relative;
+
+    }
+
+    .textContainer {
+        text-align: center;
+        width: 50%;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .right {
+        background-color: #eee;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .list {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .list-style-1 {
+        list-style: none;
+        font-size: 30px;
+    }
+
+    .list-style-2 {
+        list-style: none;
+        font-size: 25px;
+    }
+
+    .fa-arrow-alt-circle-right {
+        /* background-image: linear-gradient(to right, rgb(255, 196, 1), rgb(255, 172, 48));
+        color: transparent;
+        background-clip: text;
+        -webkit-background-clip: text; */
+        background-image: linear-gradient(to right bottom, rgb(255, 0, 0), rgb(111, 0, 255));
+        color: transparent;
+        background-clip: text;
+        -webkit-background-clip: text;
+    }
+
+    .moduleSection-1,
+    .moduleSection-2 {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        padding: 20px;
+    }
+
+    .moduleSection-1 h1,
+    .moduleSection-2 h1 {
+        background-image: linear-gradient(to right, rgb(255, 0, 0), rgb(111, 0, 255));
+        color: transparent;
+        background-clip: text;
+        -webkit-background-clip: text;
+        font-size: 30px;
+        text-align: center;
+        font-style: italic;
+
+    }
+
+    .lists-4 {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: auto;
+    }
+
+    .lists-2 {
+        display: grid;
+        grid-template-columns: repeat(2, auto);
+        grid-template-rows: auto;
+        justify-content: space-evenly;
+    }
+
+    .descriptionMain {
+        width: 100%;
+        height: fit-content;
+    }
+
+    .descriptionDiv {
+        width: 70%;
+        height: fit-content;
+        margin: 0 auto;
+        padding: 20px;
+    }
+
+    .nav-pills {
+        justify-content: space-between;
+        background-color: #eee;
+    }
+
+    @media (max-width:1250px) {
+        .lists-4 {
+            grid-template-columns: repeat(2, auto);
+        }
+    }
+
+    @media (max-width:1050px) {
+        .descriptionDiv {
+            width: 100%;
+        }
+    }
+
+    @media (max-width: 700px) {
+        .header {
+            flex-direction: column;
+            height: max-content;
+        }
+
+        .section {
+            width: 100%;
+        }
+
+        .left {
+            height: 80vh;
+        }
+
+        .textContainer {
+
+            width: 100%;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+    }
+
+    @media (max-width:450px) {
+
+        .lists-2,
+        .lists-4 {
+            grid-template-columns: repeat(1, auto);
+        }
+
+    }
+
+    @media (max-width:350px) {
+
+        .lists-2,
+        .lists-4 {
+            grid-template-columns: repeat(1, auto);
+        }
+    }
+</style>
+
+<body>
+    <div class="contact-navbar">
+        <div class="contact-info">
+            <i class="fa fa-phone"></i>
+            <span class="phoneNumber">Sunrise Computer Classes : <a class="phoneNumberLink"
+                    href="tel:8826118037">8826118037</a>
+                , <a class="phoneNumberLink" href="tel:9650173057">7053301150</a></span>
+            <i class="fa fa-envelope-o"></i>
+            <span class="emailId"><a class="emailAddressLink"
+                    href="mailTo:sunrisecomputernoida@gmail.com">sunrisecomputernoida@gmail.com</a></span>
+        </div>
+        <div class="social-media-links">
+            <a href="https://www.facebook.com/Sunrisecarrier/?ref=bookmarks">
+                <i class="fab fa-facebook"></i>
+            </a>
+            <a href="https://www.instagram.com/sunriseclassesnoida1/">
+                <i class="fab fa-instagram"></i>
+            </a>
+            <a href="https://twitter.com/ClassesNoida">
+                <i class="fab fa-twitter"></i>
+            </a>
+            <a href="https://www.youtube.com/channel/UCQeoMZErJ4ENUl3VM_f78Mg/featured?view_as=subscriber">
+                <i class="fab fa-youtube"></i>
+            </a>
+        </div>
+    </div>
+    <nav class="navigation-bar sticky-top">
+        <a href="../computer.html"><img class="logo-image" src="../assests/img/logo.jpg" alt=""></a>
+        <div class="open-nav-button">
+            <i class="fa fa-bars"></i>
+        </div>
+        <div class="nav-box">
+            <a class="navigation-bar-link" href="../computer.html">home</a>
+
+            <a class="dropdown">
+                <a class="dropdown-toggle navigation-bar-link" type="button" id="dropdownMenuButton1"
+                    data-bs-toggle="dropdown" aria-expanded="false">
+                    tally & excel
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                    <li><a class="dropdown-item" href="../advance_excel/AdvanceExcel.html">advance excel</a></li>
+                    <li><a class="dropdown-item" href="../tally_erp_executive/tallyErpExecutive.html">tally erp
+                            executive</a></li>
+                    <li><a class="dropdown-item" href="../tally_erp_operations/tallyErpOperations.html">tally erp
+                            operations</a></li>
+
+                </ul>
+            </a>
+            <a class="dropdown">
+                <a class="dropdown-toggle navigation-bar-link" type="button" id="dropdownMenuButton1"
+                    data-bs-toggle="dropdown" aria-expanded="false">
+                    graphic & web
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                    <li><a class="dropdown-item" href="../web_designing/webdesigning.html">advance diploma in web
+                            designing</a></li>
+                    <li><a class="dropdown-item" href="../graphic_designing/graphicDesigning.html">advance diploma in
+                            graphic designing</a></li>
+                    <li><a class="dropdown-item" href="../photoshop/photoshop.html">advance photoshop course</a></li>
+
+                </ul>
+            </a>
+            <a class="dropdown">
+                <a class="dropdown-toggle navigation-bar-link" type="button" id="dropdownMenuButton1"
+                    data-bs-toggle="dropdown" aria-expanded="false">
+                    animation
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                    <li><a class="dropdown-item" href="../multimedia_&_animation/multimedia&Animation.html">1 year
+                            multimedia & animation</a></li>
+                    <li><a class="dropdown-item" href="../maya_3d_animaition/maya3dAnimaition.html">maya 3d animaition
+                            course</a></li>
+                    <li><a class="dropdown-item"
+                            href="../Premeire_Pro_Video_Editing_Course/PremeireProVideoEditingCourse.html">premeire pro
+                            video editing course</a></li>
+                    <li><a class="dropdown-item" href="../character_modelling/characterModelling.html">character
+                            modelling
+                            course</a></li>
+                    <li><a class="dropdown-item" href="../vfx/vfx.html">vfx visual effects & video course</a></li>
+                </ul>
+            </a>
+            <a class="dropdown">
+                <a class="dropdown-toggle navigation-bar-link" type="button" id="dropdownMenuButton1"
+                    data-bs-toggle="dropdown" aria-expanded="false">
+                    architecture
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                    <li><a class="dropdown-item" href="../autocad/autocad.html">autocad 2d & 3d</a></li>
+                    <li><a class="dropdown-item" href="../revit_architecture/revitArchitecture.html">diploma in revit
+                            architecture</a></li>
+                    <li><a class="dropdown-item" href="../3d_max/3dMax.html">3d max course</a></li>
+                    <li><a class="dropdown-item" href="../revit_mep/Revit mep.html">revit mep</a></li>
+                </ul>
+            </a>
+
+            <a class="dropdown">
+                <a class="dropdown-toggle navigation-bar-link" type="button" id="dropdownMenuButton1"
+                    data-bs-toggle="dropdown" aria-expanded="false">
+                    digital marketing
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                    <li><a class="dropdown-item" href="../digital_marketing/digitalMarketing.html">digital marketing
+                            course
+                            - top rated</a></li>
+
+                    <li><a class="dropdown-item" href="../internet_marketing/internetMarketing.html">1 year master in
+                            internet marketing course</a></li>
+                </ul>
+            </a>
+
+            <div class="close-nav-button">
+                <i class="fa fa-times"></i>
+            </div>
+            <span class="icons">
+                <a href="https://facebook.com"><i class="fab fa-facebook"></i></a>
+                <a href="https://instagram.com"><i class="fab fa-instagram"></i></a>
+                <a href="https://twitter.com"><i class="fab fa-twitter"></i></a>
+                <a href="https://youtube.com"><i class="fab fa-youtube"></i></a>
+            </span>
+        </div>
+    </nav>
+
+    <header class="header">
+        <button onclick="topFunction()" id="goToTopBtn" class="goToTopBtn" title="Go to top">
+            <i class='fas fa-arrow-circle-up'></i>
+        </button>
+        <div class="section left">
+            <div class="textContainer">
+                <span class="textContent secondary">
+                    Advance Diploma in Web Designing
+                    Rs. <s>36,550</s> 9,999/-
+                </span>
+            </div>
+        </div>
+        <div class="section right">
+            <ul class="list-style-1 list">
+
+                <li><i class='far fa-arrow-alt-circle-right'></i> Fees: Rs. <s>36,550</s> 9,999</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Duration: 4-5 Months</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Work on Projects &amp; Assignments</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> All Inclusive of Books, Certification, and GST</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Software Covered: Adobe Dreamweaver</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> HTML, CSS, Javascript</li>
+
+            </ul>
+        </div>
+    </header>
+
+    <section class="form-section">
+        <div class="form-s-content">
+            <span class="form-section-span">instant inquiry</span>
+            <div class="input-div">
+                <input type="text" class="input name" placeholder="name">
+                <input type="email" class="input email" placeholder="email">
+                <input type="number" class="input password" placeholder="phone">
+                <div class="third-section-btn-div">
+                    <a href="#" class="third-s-btn">request call back</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="moduleSection-1">
+        <h1 class="secondary">MODULE 1 : WEB PROGRAMMING</h1>
+        <div class="lists-2">
+            <ul class="list list-style-2">
+                <h1 class="secondary">HTML</h1>
+
+                <li><i class='far fa-arrow-alt-circle-right'></i> Body &amp; Text attributes</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Marquee tag &amp; its attributes</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Headings, Font</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Ordered and Unordered Lists</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Blockquote</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> HyperLinks, Sound</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Alignment of images &amp; Mapping</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Tables : Creating a Table</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Combine cells in a row or column</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Cells: Spanning, Padding</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Forms: Create List Box</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Radio Buttons</li>
+
+            </ul>
+            <ul class="list list-style-2">
+                <h1 class="secondary">Javascript(L1,L2)</h1>
+
+                <li><i class='far fa-arrow-alt-circle-right'></i> Fundamental Java Scripting</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Functions: Defining &amp; Calling</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Using Variables local, global</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Programming (If,While, Loops)</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Strings &amp; ARRAYS,</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Event handling</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Objects, Methods &amp; Properties….etc.</li>
+                <h1 class="secondary">CSS(L1)</h1>
+
+                <li><i class='far fa-arrow-alt-circle-right'></i> CSS different types of method</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> HTML, Class, DIV,Group Style</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Different link style</li>
+
+
+            </ul>
+        </div>
+    </section>
+    <section class="moduleSection-2">
+        <h1 class="secondary">MODULE 2: WEB EDITOR - Adobe Dreamweaver™</h1>
+        <div class="lists-2">
+            <ul class="list list-style-2">
+
+                <li><i class='far fa-arrow-alt-circle-right'></i> Using the Site Window, Set your local site</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Image Hyperlinks, Properties</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Rollover Image, Navigation Bar with Rollovers &amp;
+                    links</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Insert Flash Animation, Flash Video</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Displaying Data with Tables</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Design a page layout using tables</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Div Tag, AP Div</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Spray Menu, Spray Tab</li>
+
+            </ul>
+            <ul class="list list-style-2">
+
+                <li><i class='far fa-arrow-alt-circle-right'></i> Spray Accordion, Spray Collapsible</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Hyperlinks: Internal &amp; External Linking</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Email Linking &amp; Anchor Linking</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Linking (Image Hyperlinks)</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Web Authoring, Forms, Tables</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Layout / Standard view</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Building frames,framesets</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Animating with timelines</li>
+
+            </ul>
+        </div>
+    </section>
+    <section class="moduleSection-2">
+        <h1 class="secondary">MODULE 3 : HOSTING WEBSITE & UPLOADING URL</h1>
+        <div class="lists-2">
+            <ul class="list list-style-2">
+                <li><i class='far fa-arrow-alt-circle-right'></i> How to take a hosting plan</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Hosting Domains on Cpanel</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Using Cpanel to Create EMAIL’s of your domain</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Hosting Multiple Domains on Server</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Pointing Name Servers to the domains</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> How to Start your Business</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Live Domain Registration</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Complete hosting</li>
+            </ul>
+            <ul class="list list-style-2">
+                <li><i class='far fa-arrow-alt-circle-right'></i> Complete hosting</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Assigning Web Mails</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Creating Pop mails</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Assigning Web Mails</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Reselling information</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Control Panel features</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> How to create Packages</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> How to buy Hosting plans</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> How to freelance Web designing</li>
+            </ul>
+        </div>
+    </section>
+    <section class="moduleSection-2">
+        <h1 class="secondary">MODULE 4 : WEB GRAPHICS - Adobe Photoshop™</h1>
+        <div class="lists-2">
+            <ul class="list list-style-2">
+                <li><i class='far fa-arrow-alt-circle-right'></i> Create Patterns and Artistic</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Web Buttons</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Create Web Backgrounds</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Import and Export your Images</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Image Editing, Resolution</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Correction, Saturation</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Tool Box, Navigator, Info</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Option,Swatches, Brushes</li>
+            </ul>
+            <ul class="list list-style-2">
+                <li><i class='far fa-arrow-alt-circle-right'></i> Layers: Adding, Deleting</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Merge, Duplicating, Rotate</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Filters: Built-in Effects Blur,Twirl, Stain</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Emboss, Spotlight, Fire, Embossed…etc.</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Retouching, Colouring</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Creating Backgrouds, Buttons</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Image Mixing, Re-touching, Layering</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Backgrounds, Img touch</li>
+            </ul>
+        </div>
+    </section>
+    <section class="form-section">
+        <div class="form-s-content">
+            <span class="form-section-span">instant inquiry</span>
+            <div class="input-div">
+                <input type="text" class="input name" placeholder="name">
+                <input type="email" class="input email" placeholder="email">
+                <input type="number" class="input password" placeholder="phone">
+                <div class="third-section-btn-div">
+                    <a href="#" class="third-s-btn">request call back</a>
+                </div>
+            </div>
+        </div>
+
+    </section>
+    <section class="moduleSection-2">
+        <h1 class="secondary">MODULE 5: WEB 2D ANIMATION - Adobe Flash™</h1>
+        <div class="lists-2">
+            <ul class="list list-style-2">
+                <li><i class='far fa-arrow-alt-circle-right'></i> Creating Images with exciting Animation</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> The Flash Work Environment, the Stage &amp; Timeline
+                </li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Symbols &amp; Instances</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Creating Graphic / Button symbols</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Motion Tweening</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Shape Tweening</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Library Window and color mixer window</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Blast effect &amp; Ripples effect</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Interactive Movies</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Authoring Environment, Complete Toolbox</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Using Context Menus, Image Slicing</li>
+            </ul>
+            <ul class="list list-style-2">
+                <li><i class='far fa-arrow-alt-circle-right'></i> Working with Frames in Timeline</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Library Window and color mixer window.</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Adding sounds to a movie/presentation</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Layer Properties</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Spot Light Masking, Keyframes.</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Layer Masking</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Creating interactive movies</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> CD presentations</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> ACTION-SCRIPT</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Publishing and Exporting</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Optimizing movies &amp; exporting movies for the web
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="moduleSection-2">
+        <h1 class="secondary">MODULE 6: WORDPRESS BLOGS</h1>
+        <div class="lists-2">
+            <ul class="list list-style-2">
+
+                <li><i class='far fa-arrow-alt-circle-right'></i> Creating WordPress Blog</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Installing WordPress Themes</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> WordPress Plug-ins, Widgets</li>
+
+            </ul>
+            <ul class="list list-style-2">
+
+                <li><i class='far fa-arrow-alt-circle-right'></i> Using the WordPress Dashboard</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Creating pages / page title &amp; body text</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Draft vs. Publishing Blogs</li>
+
+            </ul>
+        </div>
+    </section>
+    <section class="moduleSection-2">
+        <h1 class="secondary">MODULE 7: WORDPRESS WEBSITE</h1>
+        <div class="lists-2">
+            <ul class="list list-style-2">
+                <li><i class='far fa-arrow-alt-circle-right'></i> Websites vs. Blogs</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Domain names &amp; Website</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Hosting Setting up a domain name URL</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Hosting &amp; email</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Installing WordPress</li>
+            </ul>
+            <ul class="list list-style-2">
+                <li><i class='far fa-arrow-alt-circle-right'></i> Using the C-Panel</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> WordPress Admin area</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Adding Plugins, Widgets</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Speeding up WordPress</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Using Cache &amp; Adv Tools</li>
+            </ul>
+        </div>
+    </section>
+    <section class="moduleSection-2">
+        <h1 class="secondary">MODULE 8: ADVANCED E-COMMERCE WORDPRESS</h1>
+        <div class="lists-2">
+            <ul class="list list-style-2">
+                <li><i class='far fa-arrow-alt-circle-right'></i> Woo Commerce Setup Pages</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Woo Configuration &amp; Setting</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Creating Products</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Product Image, Product</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Images &amp; WordPress</li>
+            </ul>
+            <ul class="list list-style-2">
+                <li><i class='far fa-arrow-alt-circle-right'></i> Using the C-Panel</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> WordPress Admin area</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Adding Plugins, Widgets</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Speeding up WordPress</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Using Cache &amp; Adv Tools</li>
+
+            </ul>
+        </div>
+    </section>
+    <section class="moduleSection-2">
+        <h1 class="secondary">MODULE 9: MOBILE APP/WEBSITE</h1>
+        <div class="lists-2">
+            <ul class="list list-style-2">
+                <li><i class='far fa-arrow-alt-circle-right'></i> Mobile website development</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Android App development</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Make your own mobile app for your business</li>
+            </ul>
+            <ul class="list list-style-2">
+                <li><i class='far fa-arrow-alt-circle-right'></i> compatible with iPhone, Android</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Create photo sharing, blog feeds, Twitter</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> YouTube videos, shared event calendars</li>
+            </ul>
+        </div>
+    </section>
+    <section class="moduleSection-2">
+        <h1 class="secondary"> MODULE 10: SEO</h1>
+        <div class="lists-2">
+            <ul class="list list-style-2">
+                <h1 class="secondary">ON-PAGE OPTIMIZATION</h1>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Coding Best Practices</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Filename Optimization</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Meta Tags Optimization</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Title Tags Optimization</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> KEYWORD Research</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Headers Optimization</li>
+            </ul>
+            <ul class="list list-style-2">
+                <h1 class="secondary">OFF-PAGE OPTIMIZATION</h1>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Directory Submission</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Sub: Search Engines</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Deep Linking</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> InBound Links</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Blog Directory Submission</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Book Marking/ Article writing</li>
+            </ul>
+        </div>
+    </section>
+    <section class="form-section">
+        <div class="form-s-content">
+            <span class="form-section-span">instant inquiry</span>
+            <div class="input-div">
+                <input type="text" class="input name" placeholder="name">
+                <input type="email" class="input email" placeholder="email">
+                <input type="number" class="input password" placeholder="phone">
+                <div class="third-section-btn-div">
+                    <a href="#" class="third-s-btn">request call back</a>
+                </div>
+            </div>
+        </div>
+
+    </section>
+    <section class="moduleSection-2">
+        <h1 class="secondary">MODULE 11: GOOGLE WEBMASTER TOOLS</h1>
+        <div class="lists-2">
+            <ul class="list list-style-2">
+                <li><i class='far fa-arrow-alt-circle-right'></i> Search Console</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> What is Webmaster Tools</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Site working on Search Console</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Refine personal &amp; site settings</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Manage and monitor your site</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> URL Parameters</li>
+            </ul>
+            <ul class="list list-style-2">
+                <li><i class='far fa-arrow-alt-circle-right'></i> Search Traffic</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Google Index</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Crawl &amp; Fetching your site</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Submitting your verification code</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Testing Robot.txt &amp; Sitemaps</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Security – Check for errors</li>
+            </ul>
+        </div>
+    </section>
+    <section class="moduleSection-2">
+        <h1 class="secondary">MODULE 12: WEB UTILITIES</h1>
+        <div class="lists-2">
+            <ul class="list list-style-2">
+                <h1 class="secondary">GIF ANIMATOR</h1>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Search Console</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> What is Webmaster Tools</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Site working on Search Console</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Refine personal &amp; site settings</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Manage and monitor your site</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> URL Parameters</li>
+                <h1 class="secondary">3D XARA</h1>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Positioning, Rotating, Sizing</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> 3D Extrude, Bevel, Altering Lights</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Creating Animated GIF / AVI</li>
+
+            </ul>
+            <ul class="list list-style-2">
+
+                <h1 class="secondary">MORPHING</h1>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Search Traffic</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Google Index</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Crawl &amp; Fetching your site</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Submitting your verification code</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Testing Robot.txt &amp; Sitemaps</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Security – Check for errors</li>
+
+            </ul>
+        </div>
+    </section>
+    <section class="moduleSection-2">
+        <h1 class="secondary">MODULE 13 : WEBSITE MARKETING & HOW TO START YOUR BUSINESS</h1>
+        <div class="lists-2">
+            <ul class="list list-style-2">
+                <li><i class='far fa-arrow-alt-circle-right'></i> How to Start a Web Designing Agency</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Where do I get my clients from, places and areas to
+                    look for?</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Approach and Strategies to Convert your prospective
+                    clients</li>
+            </ul>
+            <ul class="list list-style-2">
+
+
+                <li><i class='far fa-arrow-alt-circle-right'></i> How to Pitch to your clients, prove Digital
+                    Marketing is superior</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Target Oriented Marketing – Impress with Analytic
+                </li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Business Extensions with Upsell &amp; Selling
+                    multiple products</li>
+            </ul>
+        </div>
+    </section>
+
+
+    <section class="form-section">
+        <div class="form-s-content">
+            <span class="form-section-span">instant inquiry</span>
+            <div class="input-div">
+                <input type="text" class="input name" placeholder="name">
+                <input type="email" class="input email" placeholder="email">
+                <input type="number" class="input password" placeholder="phone">
+                <div class="third-section-btn-div">
+                    <a href="#" class="third-s-btn">request call back</a>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <section class="descriptionMain">
+        <div class="descriptionDiv">
+            <ul class="nav nav-pills mb-3 tertiary" id="pills-tab" role="tablist">
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link active" id="pills-home-tab" data-bs-toggle="pill"
+                        data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home"
+                        aria-selected="true"><i class='far fa-caret-square-down'></i> Facilities &
+                        Features</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="pills-profile-tab" data-bs-toggle="pill"
+                        data-bs-target="#pills-profile" type="button" role="tab" aria-controls="pills-profile"
+                        aria-selected="false"><i class='far fa-caret-square-down'></i> Eligibility</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="pills-contact-tab" data-bs-toggle="pill"
+                        data-bs-target="#pills-contact" type="button" role="tab" aria-controls="pills-contact"
+                        aria-selected="false"><i class='far fa-caret-square-down'></i> Course Fee
+                        Includes</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="pills-last-tab" data-bs-toggle="pill" data-bs-target="#pills-last"
+                        type="button" role="tab" aria-controls="pills-last" aria-selected="false"><i
+                            class='far fa-caret-square-down'></i> Timings</button>
+                </li>
+            </ul>
+
+            <div class="tab-content tertiary" id="pills-tabContent">
+                <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
+                    <p>1. Honest Counselling : Choose the Right Course @ Right Price.<br> 2. Small Batches 7-10 Students
+                        leads to Personal Attention.<br> 3. 100% Practicals with Projects.<br> 4. Original, Leagal &amp;
+                        Official Software from Autodesk, Adobe.<br> 5. Industry Endrosed Cirriculum.<br> 6. Highly
+                        Trained, Experienced &amp; Certified Faculty.<br> 7. High Emphasis on Projects &amp;
+                        Assignments.<br> 8. Friendly, Supportive, Patient &amp; Qualified Faculty.<br> 9. Easy
+                        Installment Facility.</p>
+                </div>
+                <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
+
+
+                    <h4>Who Can Do This Course:</h4>
+                    <ul>
+                        <li>Graduates, Undergraduates, 10+2</li>
+                        <li>Having the minimum knowledge on Bussiness management</li>
+                        <li>Commerce Subject Students</li>
+                    </ul>
+                    <p><strong>More You Learn Less You Pay</strong><br> <strong>Professional Training – Take a Free
+                            DEMO</strong><br> <strong>Call 9833900330 / 9930375161</strong></p>
+
+
+                </div>
+                <div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab">
+
+
+                    <p><strong>Fees: Rs. <s>36,550</s> 9,999/-</strong></p>
+                    <p><strong>What do my Tuition Fees include?</strong><br> <strong>1. Course Book.</strong><br>
+                        <strong>2. GST Included.</strong><br> <strong>3. Certificate.</strong><br> <strong>4. Extra
+                            Practice/Computer Time.</strong><br> <strong>5. 100% Placement Assistance.</strong>
+                    </p>
+
+                </div>
+
+                <div class="tab-pane fade" id="pills-last" role="tabpanel" aria-labelledby="pills-last-tab">
+                    <p><strong>Morning</strong> Batches : 7:30-9am, 9-10am, 10-11am, 11-12pm<br>
+                        <strong>Afternoon</strong> Batches : 12-1pm, 1:30-2:45pm, 3-4pm, 4-5pm<br>
+                        <strong>Evening</strong> Batches : 5-6pm, 6-7pm, 7-8pm, 8-9pm.<br> <strong>Weekend</strong>
+                        &amp; <strong>Fast Track</strong> Batches are conducted.<br> Please call to confirm the
+                        Timings.<br> <strong>Daily &amp; Alternate Day</strong> batches are conducted.<br>
+                        <strong>Call</strong> 9833900330 / 9930375161
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="third-s-third-card third-s-card">
+        <a class="third-section-card" href="..\autocad\autocad.html">
+            <span class="courseName">autocad 2D & 3D</span>
+
+            <div class="third-section-image">
+                <img class="third-s-img" src="../assests/img/ArchitectureCourses/img1.jpg" alt="">
+            </div>
+            <div class="third-section-first-span">
+                <span class="third-s-first-span">autocad 2D & 3D course</span>
+            </div>
+            <div class="third-second-second-span">
+                <span class="third-s-second-span">3D models, Drafters, Design Professionals, CAD</span>
+            </div>
+
+        </a>
+        <a class="third-section-card" href="..\revit_mep\Revit mep.html">
+            <span class="courseName"
+                style="color: white;background-image: linear-gradient(to right bottom,rgb(255, 0, 0),rgb(247, 0, 255));">revit
+                MEP</span>
+
+            <div class="third-section-image">
+                <img class="third-s-img" src="../assests/img/ArchitectureCourses/img2.jpg" alt="">
+            </div>
+            <div class="third-section-first-span">
+                <span class="third-s-first-span">diploma in revit MEP course</span>
+            </div>
+            <div class="third-second-second-span">
+                <span class="third-s-second-span">Mechanical, electrical and plumbing, HVAC, model</span>
+            </div>
+
+        </a>
+        <a class="third-section-card" href="..\revit_architecture\revitArchitecture.html">
+            <span class="courseName"
+                style="color: white;background-image: linear-gradient(to right bottom,rgb(93, 0, 241),rgb(76, 0, 255));">revit
+                architecture</span>
+
+            <div class="third-section-image">
+                <img class="third-s-img" src="../assests/img/ArchitectureCourses/img3.jpg" alt="">
+            </div>
+            <div class="third-section-first-span">
+                <span class="third-s-first-span">revit architecture course</span>
+            </div>
+            <div class="third-second-second-span">
+                <span class="third-s-second-span">modelling, desingning, inreriors, doors, windows, block</span>
+            </div>
+
+        </a>
+        <a class="third-section-card" href="..\3d_max\3dMax.html">
+            <span class="courseName"
+                style="color: white;background-image: linear-gradient(to right bottom,green,rgb(51, 85, 51));">3D
+                max</span>
+
+            <div class="third-section-image">
+                <img class="third-s-img" src="../assests/img/ArchitectureCourses/img4.jpg" alt="">
+            </div>
+            <div class="third-section-first-span">
+                <span class="third-s-first-span">diploma in 3D max course</span>
+            </div>
+            <div class="third-second-second-span">
+                <span class="third-s-second-span">3D interior design visualization, drawings, architectural
+                    designs</span>
+            </div>
+
+        </a>
+    </div>
+
+
+    <div class="footer">
+        <div class="footerDiv">
+            <h3 class="fotterDiv-heading">address</h3>
+            <span class="footerDiv-span"><i class="fa fa-paper-plane-o"></i>1st Floor Roshan Complax, Gali Number 2,
+                near Evergreen Sweets, Mamura, Sector 66, Noida, Uttar Pradesh 201301.</span>
+            <span class="footerDiv-span"><i class="fa fa-phone"></i><a class="phoneNumberLink"
+                    href="tel:8826118037">8826118037</a> / <a class="phoneNumberLink"
+                    href="tel:9650173057">7053301150</a></span>
+            <span class="footerDiv-span"><i class="fa fa-envelope-o"></i><a class="emailAddressLink"
+                    href="mailTo:sunrisecomputernoida@gmail.com">sunrisecomputernoida@gmail.com</a></span>
+            <div class="footer-social-media">
+                <a href="https://facebook.com"><i class='fab fa-facebook'></i></a>
+                <a href="https://instagram.com"><i class='fab fa-instagram'></i></a>
+                <a href="https://twitter.com"><i class='fab fa-twitter'></i></a>
+                <a href="https://youtube.com"><i class='fab fa-youtube'></i></a>
+            </div>
+        </div>
+        <div class="footerDiv">
+            <h3 class="fotterDiv-heading">top Courses</h3>
+            <a class="footerDiv-link" href="../digital_marketing\digitalMarketing.html">digital marketing
+                courses</a>
+            <a class="footerDiv-link" href="../tally_erp_executive/tallyErpExecutive.html">tally-accounting
+                courses</a>
+            <a class="footerDiv-link" href="../autocad/autocad.html">autoCad marchitecture courses</a>
+            <a class="footerDiv-link" href="../maya_3d_animaition/maya3dAnimaition.html">3d max diploma courses</a>
+            <a class="footerDiv-link" href="../graphic_designing/graphicDesigning.html">graphic design courses</a>
+        </div>
+        <div class="footerDiv">
+            <h3 class="fotterDiv-heading">other courses</h3>
+            <a class="footerDiv-link" href="../revit_architecture/revitArchitecture.html">revit architecute
+                courses</a>
+            <a class="footerDiv-link" href="../web_designing/webdesigning.html">website desigining courses</a>
+            <a class="footerDiv-link" href="../multimedia_&_animation/multimedia&Animation.html">master multimedia
+                Courses</a>
+            <a class="footerDiv-link" href="../maya_3d_animaition/maya3dAnimaition.html">3D animation Courses</a>
+            <a class="footerDiv-link" href="../fashion_designing/fashionDesigning.html">fashion desigining
+                courses</a>
+            courses</a>
+        </div>
+
+
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+        crossorigin="anonymous"></script>
+    <script src="../navigation-bar.js"></script>
+    <script src="../button.js"></script>
+</body>
+
+</html>

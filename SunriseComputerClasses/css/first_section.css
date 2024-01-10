@@ -1,0 +1,358 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Lato', sans-serif;
+}
+
+::-webkit-scrollbar {
+    width: 6px;
+    height: 4px;
+}
+
+.contact-navbar {
+    background-color: black;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding: 10px;
+}
+
+.contact-info {
+    display: flex;
+    align-items: center;
+}
+
+.fa-phone {
+    color: rgb(0, 255, 0);
+
+}
+
+.fa-envelope-o {
+    color: gold;
+}
+
+.phoneNumber,
+.emailId {
+    font-size: 20px;
+    font-weight: 400;
+    color: white;
+    margin: 0 10px;
+}
+
+.phoneNumberLink,
+.emailAddressLink {
+    text-decoration: none;
+    color: white;
+}
+
+.phoneNumberLink:hover,
+.emailAddressLink:hover {
+    text-decoration: underline;
+}
+
+.social-media-links {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.fa-facebook {
+    color: rgb(0, 110, 255);
+    font-size: 20px;
+}
+
+.fa-twitter {
+    color: rgb(86, 154, 243);
+    font-size: 20px;
+}
+
+.fa-instagram {
+    color: rgb(255, 0, 191);
+    font-size: 20px;
+}
+
+.fa-youtube {
+    color: rgb(255, 0, 0);
+    font-size: 20px;
+}
+
+.header {
+    /* background-image: linear-gradient(to right bottom, rgb(0, 238, 255), rgb(0, 68, 255)); */
+    background-image: url(../assests/img/main_background_image.jpg);
+
+    /* background-image: linear-gradient(to right bottom, transparent, rgba(0, 0, 0, 0.8) 100%), url(../assests/img/main_background_image.jpg); */
+    background-size: cover;
+    height: fit-content;
+}
+
+.header-content {
+    width: auto;
+    padding: 180px 10px;
+    text-align: center
+}
+
+.header-content-main {
+    margin-bottom: 30px;
+}
+
+.header-content-line-1 {
+    display: block;
+    color: white;
+    font-size: 70px;
+    font-weight: 600;
+    font-family: lato;
+    text-transform: capitalize;
+}
+
+.header-content-line-2 {
+    display: block;
+    color: white;
+    font-size: 30px;
+    font-weight: 400;
+    font-family: lato;
+    text-transform: capitalize;
+}
+
+
+.contact-us-btn:link {
+    text-decoration: none;
+    font-size: 20px;
+    padding: 20px;
+    color: rgb(0, 132, 255);
+    background-color: #fff;
+    text-transform: uppercase;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.contact-us-btn:hover {
+    color: rgb(0, 132, 255);
+    background-color: #eee;
+
+}
+
+.fa-arrow-circle-up {
+    font-size: 40px;
+    color: transparent;
+    background-image: linear-gradient(to right bottom, rgb(0, 238, 255), rgb(0, 68, 255));
+    background-clip: text;
+    -webkit-background-clip: text;
+}
+
+.goToTopBtn {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 99;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    background-color: transparent;
+    border-radius: 50%;
+}
+
+.fa-paper-plane-o {
+    background-image: linear-gradient(to right bottom, rgb(0, 238, 255), rgb(0, 68, 255));
+    color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+
+}
+
+.fa-paper-plane-o {
+    font-size: 15px;
+
+}
+
+.navigation-bar {
+    background-color: rgb(255, 255, 255);
+    box-sizing: border-box;
+    box-shadow: 0 2px 15px rgba(128, 128, 128, 0.5);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.nav-box {
+    display: flex;
+    list-style: none;
+    gap: 10px;
+}
+
+.navigation-bar-link {
+    padding: 10px;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: black;
+    font-weight: 500;
+    font-size: 20px;
+    font-family: sans-serif;
+}
+
+.navigation-bar-link:hover {
+    background-color: #eee;
+    color: #0d6efd;
+}
+
+.dropdown-toggle {
+    text-transform: capitalize;
+}
+
+.dropdown-item {
+    text-transform: capitalize;
+    font-weight: 400;
+    font-size: 20px;
+}
+
+
+.dropdown-menu {
+    background-color: rgba(255, 255, 255);
+    border-radius: 0 0 5px 5px;
+    box-shadow: 0 2px 15px rgb(128, 128, 128, .5);
+}
+
+.dropdown-item:hover {
+    background-color: #eee;
+    color: #0d6efd;
+}
+
+.open-nav-button {
+    font-size: 20px;
+    margin: 20px;
+    display: none;
+    cursor: pointer;
+}
+
+.icons {
+    display: flex;
+    gap: 20px;
+    display: none;
+    cursor: pointer;
+}
+
+.close-nav-button {
+    font-size: 20px;
+    display: none;
+    cursor: pointer;
+}
+
+.logo-image {
+    width: 150px;
+    margin-left: 20px;
+}
+
+@media(max-width:1250px) {
+    .contact-navbar {
+        display: none;
+    }
+
+    .navigation-bar {
+        background-color: rgb(255, 255, 255);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .nav-box {
+        height: max-content;
+        position: fixed;
+        top: 0;
+        right: 0;
+        left: 0;
+        z-index: 10;
+        flex-direction: column;
+        justify-content: space-around;
+        padding: 50px;
+        align-items: left;
+        display: none;
+        background-color: white;
+        color: black;
+    }
+
+    .close-nav-button {
+        display: block;
+        position: absolute;
+        top: 20px;
+        right: 20px;
+    }
+
+    .navigation-bar-link {
+        padding: 10px;
+        color: black;
+        transition: all .4s;
+        font-size: 20px;
+    }
+
+    .open-nav-button {
+        display: block;
+    }
+
+    .icons {
+        transition: all .3s;
+        display: flex;
+        gap: 20px;
+        padding: 12px;
+
+    }
+
+    .contact-us-btn:link {
+        font-size: 20px;
+        padding: 15px;
+    }
+
+}
+
+@media(max-width:1250px) {
+    .header-content-line-1 {
+        display: block;
+        color: white;
+        font-size: 50px;
+        font-weight: 600;
+        font-family: lato;
+        text-transform: capitalize;
+    }
+
+    .header-content-line-2 {
+        display: block;
+        color: white;
+        font-size: 20px;
+        font-weight: 400;
+        font-family: lato;
+        text-transform: capitalize;
+    }
+
+    .contact-us-btn:link {
+        font-size: 20px;
+        padding: 15px;
+    }
+
+}
+
+@media(max-width:600px) {
+    .header-content-line-1 {
+        display: block;
+        color: white;
+        font-size: 30px;
+        font-weight: 600;
+        font-family: lato;
+        text-transform: capitalize;
+    }
+
+    .header-content-line-2 {
+        display: block;
+        color: white;
+        font-size: 20px;
+        font-weight: 400;
+        font-family: lato;
+        text-transform: capitalize;
+    }
+
+    .contact-us-btn:link {
+        font-size: 15px;
+        padding: 10px;
+    }
+
+}

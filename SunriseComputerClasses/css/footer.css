@@ -1,0 +1,76 @@
+.footer {
+    padding-top: 100px;
+    padding-bottom: 100px;
+    background-color: #002147;
+    display: grid;
+    grid-template-rows: auto;
+    column-gap: 50px;
+    grid-template-columns: 400px 300px 300px;
+    justify-content: center;
+}
+
+.footer-social-media {
+    display: flex;
+    gap: 15px;
+}
+
+.fotterDiv-heading {
+    color: white;
+    text-transform: capitalize;
+    font-size: 30px;
+}
+
+.footerDiv-span {
+    color: white;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.footerDiv {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    height: auto;
+}
+
+.footerDiv-link {
+    color: white;
+    text-transform: capitalize;
+    font-size: 18px;
+    text-decoration: none;
+}
+
+.footerDiv-link:hover {
+    color: transparent;
+    background-image: linear-gradient(to right bottom, rgb(53, 221, 233), rgb(50, 137, 236));
+    text-transform: capitalize;
+    background-clip: text;
+    -webkit-background-clip: text;
+    font-size: 18px;
+}
+
+@media (max-width:1150px) {
+    .footer {
+        grid-template-columns: 300px 300px 300px;
+        justify-content: center;
+        gap: 30px;
+        padding: 50px 20px;
+    }
+}
+
+@media (max-width:1050px) {
+    .footer {
+        grid-template-columns: 300px 300px;
+        grid-template-rows: auto;
+        justify-content: center;
+        gap: 20px;
+        padding: 50px 20px;
+    }
+}
+
+@media (max-width:880px) {
+    .footer {
+        grid-template-columns: 250px;
+        grid-template-rows: auto auto auto;
+    }
+}

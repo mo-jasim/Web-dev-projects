@@ -1,0 +1,617 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/29c2b75804.js" crossorigin="anonymous"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/first_section.css">
+    <link rel="stylesheet" href="../css/third-section.css">
+    <link rel="stylesheet" href="../css/form-section.css">
+    <link rel="stylesheet" href="../css/footer.css">
+    <title>Document</title>
+</head>
+<style>
+    * {
+        box-sizing: border-box;
+        padding: 0;
+        margin: 0;
+    }
+
+    .header {
+        display: flex;
+        height: 80vh;
+        flex-direction: row;
+    }
+
+    .secondary {
+        font-size: 40px;
+    }
+
+    .tertiary {
+        font-size: 25px;
+    }
+
+    .textContent {
+        color: white;
+        text-transform: capitalize;
+        font-style: italic;
+    }
+
+    .section {
+        width: 50%;
+        height: 100%;
+    }
+
+    .left {
+        background-image: linear-gradient(to right bottom, transparent, rgba(0, 0, 0, 0.8) 100%), url(../assests/img/background_image3.jpg);
+        background-size: cover;
+        position: relative;
+
+    }
+
+    .textContainer {
+        text-align: center;
+        width: 70%;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .right {
+        background-color: #eee;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .list {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .list-style-1 {
+        list-style: none;
+        font-size: 25px;
+    }
+
+    .list-style-2 {
+        list-style: none;
+        font-size: 25px;
+    }
+
+    .fa-arrow-alt-circle-right {
+        background-image: linear-gradient(to right bottom, rgb(255, 0, 0), rgb(111, 0, 255));
+        color: transparent;
+        background-clip: text;
+        -webkit-background-clip: text;
+    }
+
+    .moduleSection-1,
+    .moduleSection-2 {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        padding: 20px;
+    }
+
+    .moduleSection-1 h1,
+    .moduleSection-2 h1 {
+        background-image: linear-gradient(to right, rgb(255, 0, 0), rgb(111, 0, 255));
+        color: transparent;
+        background-clip: text;
+        -webkit-background-clip: text;
+        font-size: 30px;
+        text-align: center;
+        font-style: italic;
+
+    }
+
+    .lists-4 {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: auto;
+    }
+
+    .lists-2 {
+        display: grid;
+        grid-template-columns: repeat(2, auto);
+        grid-template-rows: auto;
+        justify-content: space-evenly;
+    }
+
+    .descriptionMain {
+        width: 100%;
+        height: fit-content;
+    }
+
+    .descriptionDiv {
+        width: 70%;
+        height: fit-content;
+        margin: 0 auto;
+        padding: 20px;
+    }
+
+    .nav-pills {
+        justify-content: space-between;
+        background-color: #eee;
+    }
+
+    @media (max-width:1250px) {
+        .lists-4 {
+            grid-template-columns: repeat(2, auto);
+        }
+    }
+
+    @media (max-width:1050px) {
+        .descriptionDiv {
+            width: 100%;
+        }
+    }
+
+    @media (max-width: 700px) {
+        .header {
+            flex-direction: column;
+            height: max-content;
+        }
+
+        .section {
+            width: 100%;
+        }
+
+        .left {
+            height: 80vh;
+        }
+
+        .textContainer {
+
+            width: 100%;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+    }
+
+    @media (max-width:450px) {
+
+        .lists-2,
+        .lists-4 {
+            grid-template-columns: repeat(1, auto);
+        }
+
+    }
+
+    @media (max-width:350px) {
+
+        .lists-2,
+        .lists-4 {
+            grid-template-columns: repeat(1, auto);
+        }
+    }
+</style>
+
+<body>
+    <div class="contact-navbar">
+        <div class="contact-info">
+            <i class="fa fa-phone"></i>
+            <span class="phoneNumber">Sunrise Computer Classes : <a class="phoneNumberLink"
+                    href="tel:8826118037">8826118037</a>
+                , <a class="phoneNumberLink" href="tel:9650173057">7053301150</a></span>
+            <i class="fa fa-envelope-o"></i>
+            <span class="emailId"><a class="emailAddressLink"
+                    href="mailTo:sunrisecomputernoida@gmail.com">sunrisecomputernoida@gmail.com</a></span>
+        </div>
+        <div class="social-media-links">
+            <a href="https://www.facebook.com/Sunrisecarrier/?ref=bookmarks">
+                <i class="fab fa-facebook"></i>
+            </a>
+            <a href="https://www.instagram.com/sunriseclassesnoida1/">
+                <i class="fab fa-instagram"></i>
+            </a>
+            <a href="https://twitter.com/ClassesNoida">
+                <i class="fab fa-twitter"></i>
+            </a>
+            <a href="https://www.youtube.com/channel/UCQeoMZErJ4ENUl3VM_f78Mg/featured?view_as=subscriber">
+                <i class="fab fa-youtube"></i>
+            </a>
+        </div>
+    </div>
+    <nav class="navigation-bar sticky-top">
+        <a href="../computer.html"><img class="logo-image" src="../assests/img/logo.jpg" alt=""></a>
+        <div class="open-nav-button">
+            <i class="fa fa-bars"></i>
+        </div>
+        <div class="nav-box">
+            <a class="navigation-bar-link" href="../computer.html">home</a>
+
+            <a class="dropdown">
+                <a class="dropdown-toggle navigation-bar-link" type="button" id="dropdownMenuButton1"
+                    data-bs-toggle="dropdown" aria-expanded="false">
+                    tally & excel
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                    <li><a class="dropdown-item" href="../advance_excel/AdvanceExcel.html">advance excel</a></li>
+                    <li><a class="dropdown-item" href="../tally_erp_executive/tallyErpExecutive.html">tally erp
+                            executive</a></li>
+                    <li><a class="dropdown-item" href="../tally_erp_operations/tallyErpOperations.html">tally erp
+                            operations</a></li>
+
+                </ul>
+            </a>
+            <a class="dropdown">
+                <a class="dropdown-toggle navigation-bar-link" type="button" id="dropdownMenuButton1"
+                    data-bs-toggle="dropdown" aria-expanded="false">
+                    graphic & web
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                    <li><a class="dropdown-item" href="../web_designing/webdesigning.html">advance diploma in web
+                            designing</a></li>
+                    <li><a class="dropdown-item" href="../graphic_designing/graphicDesigning.html">advance diploma in
+                            graphic designing</a></li>
+                    <li><a class="dropdown-item" href="../photoshop/photoshop.html">advance photoshop course</a></li>
+
+                </ul>
+            </a>
+            <a class="dropdown">
+                <a class="dropdown-toggle navigation-bar-link" type="button" id="dropdownMenuButton1"
+                    data-bs-toggle="dropdown" aria-expanded="false">
+                    animation
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                    <li><a class="dropdown-item" href="../multimedia_&_animation/multimedia&Animation.html">1 year
+                            multimedia & animation</a></li>
+                    <li><a class="dropdown-item" href="../maya_3d_animaition/maya3dAnimaition.html">maya 3d animaition
+                            course</a></li>
+                    <li><a class="dropdown-item"
+                            href="../Premeire_Pro_Video_Editing_Course/PremeireProVideoEditingCourse.html">premeire pro
+                            video editing course</a></li>
+                    <li><a class="dropdown-item" href="../character_modelling/characterModelling.html">character
+                            modelling
+                            course</a></li>
+                    <li><a class="dropdown-item" href="../vfx/vfx.html">vfx visual effects & video course</a></li>
+                </ul>
+            </a>
+            <a class="dropdown">
+                <a class="dropdown-toggle navigation-bar-link" type="button" id="dropdownMenuButton1"
+                    data-bs-toggle="dropdown" aria-expanded="false">
+                    architecture
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                    <li><a class="dropdown-item" href="../autocad/autocad.html">autocad 2d & 3d</a></li>
+                    <li><a class="dropdown-item" href="../revit_architecture/revitArchitecture.html">diploma in revit
+                            architecture</a></li>
+                    <li><a class="dropdown-item" href="../3d_max/3dMax.html">3d max course</a></li>
+                    <li><a class="dropdown-item" href="../revit_mep/Revit mep.html">revit mep</a></li>
+                </ul>
+            </a>
+
+            <a class="dropdown">
+                <a class="dropdown-toggle navigation-bar-link" type="button" id="dropdownMenuButton1"
+                    data-bs-toggle="dropdown" aria-expanded="false">
+                    digital marketing
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                    <li><a class="dropdown-item" href="../digital_marketing/digitalMarketing.html">digital marketing
+                            course
+                            - top rated</a></li>
+
+                    <li><a class="dropdown-item" href="../internet_marketing/internetMarketing.html">1 year master in
+                            internet marketing course</a></li>
+                </ul>
+            </a>
+
+            <div class="close-nav-button">
+                <i class="fa fa-times"></i>
+            </div>
+            <span class="icons">
+                <a href="https://facebook.com"><i class="fab fa-facebook"></i></a>
+                <a href="https://instagram.com"><i class="fab fa-instagram"></i></a>
+                <a href="https://twitter.com"><i class="fab fa-twitter"></i></a>
+                <a href="https://youtube.com"><i class="fab fa-youtube"></i></a>
+            </span>
+        </div>
+    </nav>
+
+    <header class="header">
+        <button onclick="topFunction()" id="goToTopBtn" class="goToTopBtn" title="Go to top">
+            <i class='fas fa-arrow-circle-up'></i>
+        </button>
+        <div class="section left">
+            <div class="textContainer">
+                <span class="textContent secondary">
+                    Advanced Diploma 1 Year 3D Animation Graphics
+                    Fees: Rs. <s>1,45,550</s> 9?,551/-
+                </span>
+            </div>
+        </div>
+        <div class="section right">
+            <ul class="list-style-1 list">
+                <li><i class='far fa-arrow-alt-circle-right'></i> Fees: Rs. <s>1,45,550</s> 9?,551</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Duration: 1 Year / 6 Months</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Work on Projects &amp; Assignments</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> All Inclusive of Books, Certification, and GST</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Software Covered: Autodesk 3Ds-MAX™, Adobe Photoshop™,
+                </li>
+                <li>Adobe After Effects™, Adobe Premiere™,
+                    Adobe Illustrator™</li>
+            </ul>
+        </div>
+    </header>
+
+    <section class="form-section">
+        <div class="form-s-content">
+            <span class="form-section-span">instant inquiry</span>
+            <div class="input-div">
+                <input type="text" class="input name" placeholder="name">
+                <input type="email" class="input email" placeholder="email">
+                <input type="number" class="input password" placeholder="phone">
+                <div class="third-section-btn-div">
+                    <a href="#" class="third-s-btn">request call back</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="moduleSection-1">
+        <h1 class="secondary">Career Options :</h1>
+
+
+        <div class="lists-2">
+
+            <ul class="list list-style-2">
+
+                <li><i class='far fa-arrow-alt-circle-right'></i> Graphic Designer</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Web Designer</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> 2D Animator</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Game Designer</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> 3D Animator</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Video Editor</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Video Marketer</li>
+
+            </ul>
+            <ul class="list list-style-2">
+                <li><i class='far fa-arrow-alt-circle-right'></i> After Effect Specialist</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Layout Specialist</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Digital Artist</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Animation Expert</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Modelling Artist</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Visualizer</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Photoshop Image Retoucher</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> 3D Social Animator</li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="moduleSection-1">
+
+        <div class="lists-2">
+
+            <ul class="list list-style-2">
+                <h1 class="secondary">SEMESTER 1: GRAPHIC DESIGNING DIPLOMA</h1>
+
+                Creating & Laying out Print Media, Designers & Graphics production artists. Image Editing & Page Layout
+                Design, Creating Graphic & Illustration. Graphic Designing using Adobe Suite.
+
+            </ul>
+            <ul class="list list-style-2">
+                <h1 class="secondary">SEMESTER 2: 2D ANIMATION</h1>
+
+                Adobe Flash multimedia allows developers & designers to create a rich and engaging presentation,
+                applications, animations, and websites.
+            </ul>
+        </div>
+    </section>
+
+    <section class="moduleSection-1">
+
+        <div class="lists-2">
+            <ul class="list list-style-2">
+                <h1 class="secondary">SEMESTER 3: 3D ANIMATION</h1>
+                3ds Max® software provides a comprehensive animation, simulation, modeling, and rendering solution for
+                motion artists, film, games. Autodesk 3ds Max helps you create stunning scenes, detailed characters and
+                bringing your imagination to life.
+            </ul>
+            <ul class="list list-style-2">
+                <h1 class="secondary">SEMESTER 4: CHARACTER MODELING</h1>
+                3D Max Character Modeling course with a detailed discussion about the modeling and the types of
+                approaches we can use for designing a detailed character in Max.
+            </ul>
+        </div>
+    </section>
+
+    <section class="moduleSection-1">
+        <div class="lists-2">
+            <ul class="list list-style-2">
+                <h1 class="secondary">SEMESTER 5: VISUAL FX</h1>
+                After Effects delivers tools to produce visual effects & motion graphics for film, videos, web,
+                multimedia, web. Having full control while working in a 2D or 3D compositing environment.
+            </ul>
+            <ul class="list list-style-2">
+                <h1 class="secondary">SEMESTER 6: VIDEO EDITING PRO</h1>
+                Adobe Premiere Pro is a powerful tool for professional digital Video Editing Designed for video
+                professionals. It’s superb editing tools & interface helps you to work with complete flexibility &
+                control to broadcast-quality movies.
+            </ul>
+        </div>
+    </section>
+    <section class="moduleSection-1">
+        <h1 class="secondary">SEMESTER 7: ADVANCE WEB DESIGNING</h1>
+
+        <div class="lists-2">
+            <ul class="list list-style-2">
+                <li><i class='far fa-arrow-alt-circle-right'></i> Web Programming</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Web Editor</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Hosting Website &amp; Uploading URL</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Web Graphics</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Web 2D Animation</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> WordPress Blogs</li>
+            </ul>
+            <ul class="list list-style-2">
+                <li><i class='far fa-arrow-alt-circle-right'></i> WordPress Website</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Mobile App/Website</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> SEO [On &amp; Off Page Optimization]</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Google Webmaster Tools</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Web Utilities</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Infographics For Websites &amp; Marketing</li>
+            </ul>
+
+        </div>
+    </section>
+    <section class="moduleSection-1">
+        <div class="lists-2">
+            <ul class="list list-style-2">
+                <h1 class="secondary">SEMESTER 8: SOUND EDITING</h1>
+                The Sound Editing includes the whole process right from the raw audio to the finished Digital Audio.
+                Edit audio files, adjust speed, analyze, record, restore, multi-channel audio files, design sound for
+                multimedia.
+            </ul>
+            <ul class="list list-style-2">
+                <h1 class="secondary">SEMESTER 9: CONTENT MARKETING</h1>
+                Video Marketing, Facebook Marketing, Promote your Videos on YouTube and 3D Animation online with the
+                world. Learn how to get your creations viral on social media. Content Marketing online tools.
+            </ul>
+        </div>
+    </section>
+
+    <section class="form-section">
+        <div class="form-s-content">
+            <span class="form-section-span">instant inquiry</span>
+            <div class="input-div">
+                <input type="text" class="input name" placeholder="name">
+                <input type="email" class="input email" placeholder="email">
+                <input type="number" class="input password" placeholder="phone">
+                <div class="third-section-btn-div">
+                    <a href="#" class="third-s-btn">request call back</a>
+                </div>
+            </div>
+        </div>
+
+    </section>
+    </section>
+    <div class="third-s-forth-card third-s-card">
+        <a class="third-section-card" href="..\multimedia_&_animation\multimedia&Animation.html">
+            <span class="courseName"
+                style="color: white;background-image: linear-gradient(to right bottom,rgb(241, 157, 0),rgb(255, 38, 0));">Tally-ERP</span>
+
+            <div class="third-section-image">
+                <img class="third-s-img" src="../assests/img/AnimationCourses/img1.jfif" alt="">
+            </div>
+            <div class="third-section-first-span">
+                <span class="third-s-first-span">diploma in 3D animation course</span>
+            </div>
+            <div class="third-second-second-span">
+                <span class="third-s-second-span">character modelling, VFX, visual effects sketching</span>
+            </div>
+
+        </a>
+        <a class="third-section-card" href="..\vfx\vfx.html">
+            <span class="courseName"
+                style="color: white;background-image: linear-gradient(to right bottom,rgb(255, 0, 0),rgb(247, 0, 255));">VFX</span>
+
+            <div class="third-section-image">
+                <img class="third-s-img" src="../assests/img/AnimationCourses/img2.jfif" alt="">
+            </div>
+            <div class="third-section-first-span">
+                <span class="third-s-first-span">VFX Visual Effects Course</span>
+            </div>
+            <div class="third-second-second-span">
+                <span class="third-s-second-span">VFX, Special Effects, Advanced Adobe After Effects</span>
+            </div>
+
+        </a>
+        <a class="third-section-card" href="..\character_modelling\characterModelling.html">
+            <span class="courseName"
+                style="color: white;background-image: linear-gradient(to right bottom,rgb(93, 0, 241),rgb(76, 0, 255));">Character
+                Modelling Course</span>
+
+
+            <div class="third-section-image">
+                <img class="third-s-img" src="../assests/img/AnimationCourses/img3.jfif" alt="">
+            </div>
+            <div class="third-section-first-span">
+                <span class="third-s-first-span">Character Modelling Course</span>
+            </div>
+            <div class="third-second-second-span">
+                <span class="third-s-second-span">Character Animation, Advanced Graphic, 3D MAX</span>
+            </div>
+
+        </a>
+        <a class="third-section-card" href="..\maya_3d_animaition\maya3dAnimaition.html">
+            <span class="courseName"
+                style="color: white;background-image: linear-gradient(to right bottom,green,rgb(51, 85, 51));">3D
+                Maya Animation</span>
+
+            <div class="third-section-image">
+                <img class="third-s-img" src="../assests/img/AnimationCourses/img4.jpg" alt="">
+            </div>
+            <div class="third-section-first-span">
+                <span class="third-s-first-span">3D Maya Animation Course</span>
+            </div>
+            <div class="third-second-second-span">
+                <span class="third-s-second-span">Maya Animation, Sketching, Rigging, Rendering, Lighting</span>
+            </div>
+
+        </a>
+    </div>
+
+
+    <div class="footer">
+        <div class="footerDiv">
+            <h3 class="fotterDiv-heading">address</h3>
+            <span class="footerDiv-span"><i class="fa fa-paper-plane-o"></i>1st Floor Roshan Complax, Gali Number 2,
+                near Evergreen Sweets, Mamura, Sector 66, Noida, Uttar Pradesh 201301.</span>
+            <span class="footerDiv-span"><i class="fa fa-phone"></i><a class="phoneNumberLink"
+                    href="tel:8826118037">8826118037</a> / <a class="phoneNumberLink"
+                    href="tel:9650173057">7053301150</a></span>
+            <span class="footerDiv-span"><i class="fa fa-envelope-o"></i><a class="emailAddressLink"
+                    href="mailTo:sunrisecomputernoida@gmail.com">sunrisecomputernoida@gmail.com</a></span>
+            <div class="footer-social-media">
+                <a href="https://facebook.com"><i class='fab fa-facebook'></i></a>
+                <a href="https://instagram.com"><i class='fab fa-instagram'></i></a>
+                <a href="https://twitter.com"><i class='fab fa-twitter'></i></a>
+                <a href="https://youtube.com"><i class='fab fa-youtube'></i></a>
+            </div>
+        </div>
+        <div class="footerDiv">
+            <h3 class="fotterDiv-heading">top Courses</h3>
+            <a class="footerDiv-link" href="../digital_marketing\digitalMarketing.html">digital marketing
+                courses</a>
+            <a class="footerDiv-link" href="../tally_erp_executive/tallyErpExecutive.html">tally-accounting
+                courses</a>
+            <a class="footerDiv-link" href="../autocad/autocad.html">autoCad marchitecture courses</a>
+            <a class="footerDiv-link" href="../maya_3d_animaition/maya3dAnimaition.html">3d max diploma courses</a>
+            <a class="footerDiv-link" href="../graphic_designing/graphicDesigning.html">graphic design courses</a>
+        </div>
+        <div class="footerDiv">
+            <h3 class="fotterDiv-heading">other courses</h3>
+            <a class="footerDiv-link" href="../revit_architecture/revitArchitecture.html">revit architecute
+                courses</a>
+            <a class="footerDiv-link" href="../web_designing/webdesigning.html">website desigining courses</a>
+            <a class="footerDiv-link" href="../multimedia_&_animation/multimedia&Animation.html">master multimedia
+                Courses</a>
+            <a class="footerDiv-link" href="../maya_3d_animaition/maya3dAnimaition.html">3D animation Courses</a>
+            <a class="footerDiv-link" href="../fashion_designing/fashionDesigning.html">fashion desigining
+                courses</a>
+            courses</a>
+        </div>
+
+
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+        crossorigin="anonymous"></script>
+    <script src="../navigation-bar.js"></script>
+    <script src="../button.js"></script>
+</body>
+
+</html>

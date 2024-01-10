@@ -1,0 +1,1132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/29c2b75804.js" crossorigin="anonymous"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/first_section.css">
+    <link rel="stylesheet" href="../css/third-section.css">
+    <link rel="stylesheet" href="../css/form-section.css">
+    <link rel="stylesheet" href="../css/footer.css">
+    <title>Document</title>
+</head>
+<style>
+    * {
+        box-sizing: border-box;
+        padding: 0;
+        margin: 0;
+    }
+
+    .header {
+        display: flex;
+        height: 80vh;
+        flex-direction: row;
+    }
+
+    .secondary {
+        font-size: 40px;
+    }
+
+    .tertiary {
+        font-size: 25px;
+    }
+
+    .textContent {
+        color: white;
+        text-transform: capitalize;
+        font-style: italic;
+    }
+
+    .section {
+        width: 50%;
+        height: 100%;
+    }
+
+    .left {
+        background-image: linear-gradient(to right bottom, transparent, rgba(0, 0, 0, 0.8) 100%), url(../assests/img/background_image3.jpg);
+        background-size: cover;
+        position: relative;
+
+    }
+
+    .textContainer {
+        text-align: center;
+        width: 70%;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .right {
+        background-color: #eee;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .list {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .list-style-1 {
+        list-style: none;
+        font-size: 20px;
+    }
+
+    .list-style-2 {
+        list-style: none;
+        font-size: 25px;
+    }
+
+    .fa-arrow-alt-circle-right {
+        background-image: linear-gradient(to right bottom, rgb(255, 0, 0), rgb(111, 0, 255));
+        color: transparent;
+        background-clip: text;
+        -webkit-background-clip: text;
+    }
+
+    .moduleSection-1,
+    .moduleSection-2 {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        padding: 20px;
+    }
+
+    .moduleSection-1 h1,
+    .moduleSection-2 h1 {
+        background-image: linear-gradient(to right, rgb(255, 0, 0), rgb(111, 0, 255));
+        color: transparent;
+        background-clip: text;
+        -webkit-background-clip: text;
+        font-size: 30px;
+        text-align: center;
+        font-style: italic;
+
+    }
+
+    .lists-4 {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: auto;
+    }
+
+    .lists-2 {
+        display: grid;
+        grid-template-columns: repeat(2, auto);
+        grid-template-rows: auto;
+        justify-content: space-evenly;
+    }
+
+    .descriptionMain {
+        width: 100%;
+        height: fit-content;
+    }
+
+    .descriptionDiv {
+        width: 70%;
+        height: fit-content;
+        margin: 0 auto;
+        padding: 20px;
+    }
+
+    .nav-pills {
+        justify-content: space-between;
+        background-color: #eee;
+    }
+
+    @media (max-width:1250px) {
+        .lists-4 {
+            grid-template-columns: repeat(2, auto);
+        }
+    }
+
+    @media (max-width:1050px) {
+        .descriptionDiv {
+            width: 100%;
+        }
+    }
+
+    @media (max-width: 700px) {
+        .header {
+            flex-direction: column;
+            height: max-content;
+        }
+
+        .section {
+            width: 100%;
+        }
+
+        .left {
+            height: 80vh;
+        }
+
+        .textContainer {
+
+            width: 100%;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+    }
+
+    @media (max-width:450px) {
+
+        .lists-2,
+        .lists-4 {
+            grid-template-columns: repeat(1, auto);
+        }
+
+    }
+
+    @media (max-width:350px) {
+
+        .lists-2,
+        .lists-4 {
+            grid-template-columns: repeat(1, auto);
+        }
+    }
+</style>
+
+<body>
+    <div class="contact-navbar">
+        <div class="contact-info">
+            <i class="fa fa-phone"></i>
+            <span class="phoneNumber">Sunrise Computer Classes : <a class="phoneNumberLink"
+                    href="tel:8826118037">8826118037</a>
+                , <a class="phoneNumberLink" href="tel:9650173057">7053301150</a></span>
+            <i class="fa fa-envelope-o"></i>
+            <span class="emailId"><a class="emailAddressLink"
+                    href="mailTo:sunrisecomputernoida@gmail.com">sunrisecomputernoida@gmail.com</a></span>
+        </div>
+        <div class="social-media-links">
+            <a href="https://www.facebook.com/Sunrisecarrier/?ref=bookmarks">
+                <i class="fab fa-facebook"></i>
+            </a>
+            <a href="https://www.instagram.com/sunriseclassesnoida1/">
+                <i class="fab fa-instagram"></i>
+            </a>
+            <a href="https://twitter.com/ClassesNoida">
+                <i class="fab fa-twitter"></i>
+            </a>
+            <a href="https://www.youtube.com/channel/UCQeoMZErJ4ENUl3VM_f78Mg/featured?view_as=subscriber">
+                <i class="fab fa-youtube"></i>
+            </a>
+        </div>
+    </div>
+    <nav class="navigation-bar sticky-top">
+        <a href="../computer.html"><img class="logo-image" src="../assests/img/logo.jpg" alt=""></a>
+        <div class="open-nav-button">
+            <i class="fa fa-bars"></i>
+        </div>
+        <div class="nav-box">
+            <a class="navigation-bar-link" href="../computer.html">home</a>
+
+            <a class="dropdown">
+                <a class="dropdown-toggle navigation-bar-link" type="button" id="dropdownMenuButton1"
+                    data-bs-toggle="dropdown" aria-expanded="false">
+                    tally & excel
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                    <li><a class="dropdown-item" href="../advance_excel/AdvanceExcel.html">advance excel</a></li>
+                    <li><a class="dropdown-item" href="../tally_erp_executive/tallyErpExecutive.html">tally erp
+                            executive</a></li>
+                    <li><a class="dropdown-item" href="../tally_erp_operations/tallyErpOperations.html">tally erp
+                            operations</a></li>
+
+                </ul>
+            </a>
+            <a class="dropdown">
+                <a class="dropdown-toggle navigation-bar-link" type="button" id="dropdownMenuButton1"
+                    data-bs-toggle="dropdown" aria-expanded="false">
+                    graphic & web
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                    <li><a class="dropdown-item" href="../web_designing/webdesigning.html">advance diploma in web
+                            designing</a></li>
+                    <li><a class="dropdown-item" href="../graphic_designing/graphicDesigning.html">advance diploma in
+                            graphic designing</a></li>
+                    <li><a class="dropdown-item" href="../photoshop/photoshop.html">advance photoshop course</a></li>
+
+                </ul>
+            </a>
+            <a class="dropdown">
+                <a class="dropdown-toggle navigation-bar-link" type="button" id="dropdownMenuButton1"
+                    data-bs-toggle="dropdown" aria-expanded="false">
+                    animation
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                    <li><a class="dropdown-item" href="../multimedia_&_animation/multimedia&Animation.html">1 year
+                            multimedia & animation</a></li>
+                    <li><a class="dropdown-item" href="../maya_3d_animaition/maya3dAnimaition.html">maya 3d animaition
+                            course</a></li>
+                    <li><a class="dropdown-item"
+                            href="../Premeire_Pro_Video_Editing_Course/PremeireProVideoEditingCourse.html">premeire pro
+                            video editing course</a></li>
+                    <li><a class="dropdown-item" href="../character_modelling/characterModelling.html">character
+                            modelling
+                            course</a></li>
+                    <li><a class="dropdown-item" href="../vfx/vfx.html">vfx visual effects & video course</a></li>
+                </ul>
+            </a>
+            <a class="dropdown">
+                <a class="dropdown-toggle navigation-bar-link" type="button" id="dropdownMenuButton1"
+                    data-bs-toggle="dropdown" aria-expanded="false">
+                    architecture
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                    <li><a class="dropdown-item" href="../autocad/autocad.html">autocad 2d & 3d</a></li>
+                    <li><a class="dropdown-item" href="../revit_architecture/revitArchitecture.html">diploma in revit
+                            architecture</a></li>
+                    <li><a class="dropdown-item" href="../3d_max/3dMax.html">3d max course</a></li>
+                    <li><a class="dropdown-item" href="../revit_mep/Revit mep.html">revit mep</a></li>
+                </ul>
+            </a>
+
+            <a class="dropdown">
+                <a class="dropdown-toggle navigation-bar-link" type="button" id="dropdownMenuButton1"
+                    data-bs-toggle="dropdown" aria-expanded="false">
+                    digital marketing
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                    <li><a class="dropdown-item" href="../digital_marketing/digitalMarketing.html">digital marketing
+                            course
+                            - top rated</a></li>
+
+                    <li><a class="dropdown-item" href="../internet_marketing/internetMarketing.html">1 year master in
+                            internet marketing course</a></li>
+                </ul>
+            </a>
+
+            <div class="close-nav-button">
+                <i class="fa fa-times"></i>
+            </div>
+            <span class="icons">
+                <a href="https://facebook.com"><i class="fab fa-facebook"></i></a>
+                <a href="https://instagram.com"><i class="fab fa-instagram"></i></a>
+                <a href="https://twitter.com"><i class="fab fa-twitter"></i></a>
+                <a href="https://youtube.com"><i class="fab fa-youtube"></i></a>
+            </span>
+        </div>
+    </nav>
+
+    <header class="header">
+        <button onclick="topFunction()" id="goToTopBtn" class="goToTopBtn" title="Go to top">
+            <i class='fas fa-arrow-circle-up'></i>
+        </button>
+        <div class="section left">
+            <div class="textContainer">
+                <span class="textContent secondary">
+                    ADVANCED DIPLOMA VIDEO PREMIERE PRO & VFX COURSE
+                    SPECIAL OFFER ₹<s>36,550/-</s> 2?,550/- ALL INCLUSIVE
+                </span>
+            </div>
+        </div>
+        <div class="section right">
+            <ul class="list-style-1 list">
+                <li class="tertiary"><i class='far fa-arrow-alt-circle-right'></i> INTRODUCTION</li>
+                Advanced Diploma in VFX Premiere Pro Course. This Post production course is a Short-term certified
+                course, taught by Experienced professionals. This course has been specially designed for the students
+                having a creative imagination, want to become a successful animation professional.
+                <li class="tertiary"><i class='far fa-arrow-alt-circle-right'></i> PRE-REQUISITES</li>
+                Basic knowledge of Windows
+                Working knowledge of Photoshop/ Illustrator.
+            </ul>
+        </div>
+    </header>
+
+    <section class="form-section">
+        <div class="form-s-content">
+            <span class="form-section-span">instant inquiry</span>
+            <div class="input-div">
+                <input type="text" class="input name" placeholder="name">
+                <input type="email" class="input email" placeholder="email">
+                <input type="number" class="input password" placeholder="phone">
+                <div class="third-section-btn-div">
+                    <a href="#" class="third-s-btn">request call back</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="moduleSection-1">
+        <h1 class="secondary">CAREER PATHS</h1>
+
+
+        <div class="lists-2">
+
+            <ul class="list list-style-2">
+
+                <li><i class='far fa-arrow-alt-circle-right'></i> Video Editor</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Motion Graphic</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Video Mixer</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Visual Effects Artist</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> After Effects Expert</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Audio Editor</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Art Director</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> 2D and 3D Animator</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Broadcast Designers</li>
+
+
+            </ul>
+            <ul class="list list-style-2">
+                <li><i class='far fa-arrow-alt-circle-right'></i> Film Compositors</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Graphics Artist</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Presentation Specialist</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Visual Designer</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Animation Artist</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Digital Animator</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Graphic Designer</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Multimedia Artist</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Video Producer</li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="moduleSection-1">
+        <h1 class="secondary">I. ADOBE PREMIERE PRO INTERFACE</h1>
+
+        <div class="lists-2">
+
+            <ul class="list list-style-2">
+                <h1 class="secondary">LESSON 1. LEARNING THE PREMIERE PRO INTERFACE</h1>
+
+                <li><i class='far fa-arrow-alt-circle-right'></i> Understanding digital video</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Switching Premiere Pro Workspaces</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Opening, closing, and moving panels</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Understanding the Application Tools</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Setting Application Preferences</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Using the Project Panel</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Understanding media management</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Creating and organizing bins</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Using the Media Browser Panel</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Previewing Clips: Hover Scrub vs Source Monitor</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Transcoding Video</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Locating Missing Media</li>
+            </ul>
+            <ul class="list list-style-2">
+                <h1 class="secondary">LESSON 2. LEARNING TO EDIT CLIPS</h1>
+                <li><i class='far fa-arrow-alt-circle-right'></i> The Cuts-Only Editing Methodology</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Continuity editing</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> A Roll vs. B Roll &amp; Cut-ins</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Cut-aways &amp; Cutting on action</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Working with Multiple Video Tracks</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Adding and deleting tracks</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Renaming tracks</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Trimming Clips in the Source Monitor</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Adding Clips to the Timeline</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Making Insert and Overwrite Edits</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Using the Timeline Editing Tools</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Markers: Timeline vs Clip</li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="moduleSection-1">
+
+        <div class="lists-2">
+            <ul class="list list-style-2">
+                <h1 class="secondary">LESSON 3. USING VIDEO & AUDIO TRANSITIONS</h1>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Understanding Transitions</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Adding transitions to video clips</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Preparing a clip to receive transitions</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Editing transition settings</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Adding an Audio Transition</li>
+            </ul>
+            <ul class="list list-style-2">
+                <h1 class="secondary">LESSON 4. LEARNING TO USE PREMIERE PRO GRAPHICS</h1>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Understanding the Uses of Titles in Video</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Creating &amp; working with Graphic Clips</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Adding Images to a Graphic Clip</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Creating an end credit roll</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Time stretch and frame blending</li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="moduleSection-1">
+        <div class="lists-2">
+            <ul class="list list-style-2">
+                <h1 class="secondary">LESSON 5. WORKING WITH IMPORTED GRAPHICS</h1>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Working with Photoshop &amp; Illustrator Files</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Importing layered Photoshop files into projects</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Understanding and Animating Static Clip Effects</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Position | Scale | Rotation | Opacity</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Adding Transitions &amp; Effects to Images</li>
+            </ul>
+            <ul class="list list-style-2">
+                <h1 class="secondary">LESSON 6. USING PREMIERE PRO VIDEO EFFECTS</h1>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Understanding Video Effects?</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Animating Static Clip Effects</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Animating text with keyframes</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Applying Video Effects to Clips</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Timeline vs Project Panel</li>
+            </ul>
+        </div>
+    </section>
+    <section class="moduleSection-1">
+
+
+        <div class="lists-2">
+            <ul class="list list-style-2">
+                <h1 class="secondary">LESSON 7. PREMIERE PRO AUDIO EDITING</h1>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Understanding Clip Audio</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Using the Essential Audio Panel</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Assigning Audio Clip Types</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Exporting from Premiere Pro</li>
+            </ul>
+            <ul class="list list-style-2">
+                <h1 class="secondary">LESSON 8. GREENSCREEN FOOTAGE</h1>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Creating a Garbage Matte</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Working with the Ultra Keyer</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Learning to stabilize shaky footage</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Using the Warp Stabilizer</li>
+            </ul>
+
+        </div>
+    </section>
+    <section class="moduleSection-1">
+        <div class="lists-2">
+            <ul class="list list-style-2">
+                <h1 class="secondary">LESSON 9. ADVANCED EDITING IN PREMIERE PRO</h1>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Using the Trim View</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Slip, Slide and Rolling Edit Tools</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Match frames</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Nested timelines (Sequences)</li>
+            </ul>
+            <ul class="list list-style-2">
+                <h1 class="secondary">LESSON 10. MASKING TECHNIQUES IN PREMIERE PRO</h1>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Using keys &amp; matte keys</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Color, Garbage &amp;Track mattes</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Advanced transitions</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Advanced Audio editing in Premiere</li>
+            </ul>
+        </div>
+    </section>
+    <section class="moduleSection-1">
+        <div class="lists-2">
+            <ul class="list list-style-2">
+                <h1 class="secondary">
+                    LESSON 11. INTEGRATING PHOTOSHOP</h1>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Animating</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Importing layers as a sequence</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Alpha channels</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Updating Photoshop files</li>
+            </ul>
+            <ul class="list list-style-2">
+                <h1 class="secondary">LESSON 12. INTEGRATING AFTER EFFECTS</h1>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Using keys &amp; matte keys</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Color, Garbage &amp;Track mattes</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Advanced transitions</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Advanced Audio editing in Premiere</li>
+            </ul>
+        </div>
+    </section>
+    <section class="moduleSection-1">
+        <div class="lists-2">
+            <ul class="list list-style-2">
+                <h1 class="secondary">LESSON 13. COLOR CORRECTION IN PREMIERE PRO</h1>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Creating a new reference monitor window</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Gang to reference monitor feature</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Working with color scopes</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> 3 Point Color Correction</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Color Match</li>
+            </ul>
+            <ul class="list list-style-2">
+                <h1 class="secondary">LESSON 14. PROJECT OPTIMIZATION</h1>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Using Media management</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Managing multiple projects</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Optimizing system performance</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Optimizing render speed</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Render que Output module templates</li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="moduleSection-1">
+        <div class="lists-2">
+            <ul class="list list-style-2">
+                <h1 class="secondary">LESSON 15. USING THE CLONING TOOLS</h1>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Understanding high dynamic range</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Creating linear HDR compositing</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Understanding color management</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Creating Look up tables (LUT)</li>
+            </ul>
+            <ul class="list list-style-2">
+                <h1 class="secondary">LESSON 16. COLOR, LIGHT, AND HEAT</h1>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Creating Lighting qualities</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Changing lighting direction &amp; light strength</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Creating reflections &amp; realistic shadow</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Understanding Multipass 3D compositing</li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="moduleSection-1">
+        <div class="lists-2">
+            <ul class="list list-style-2">
+                <h1 class="secondary">LESSON 17. CREATING ENVIRONMENTAL EFFECTS</h1>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Creating fog, smoke, mist, wind, precipitation</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Making realistic fire and heat distortion</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Creating explosive effects</li>
+            </ul>
+            <ul class="list list-style-2">
+                <h1 class="secondary">LESSON 18. ROTOSCOPING VIDEO FOOTAGE</h1>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Creating manual rotoscoping</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Using the roto brush</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Using the paint brush to Painting on color</li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="moduleSection-1">
+        <div class="lists-2">
+            <ul class="list list-style-2">
+                <h1 class="secondary">LESSON 19. DVD EXPORT IN PREMIERE PRO</h1>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Using sequence markers</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Adding chapter information</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Exporting video from Premiere Pro</li>
+            </ul>
+        </div>
+    </section>
+
+
+    <section class="form-section">
+        <div class="form-s-content">
+            <span class="form-section-span">instant inquiry</span>
+            <div class="input-div">
+                <input type="text" class="input name" placeholder="name">
+                <input type="email" class="input email" placeholder="email">
+                <input type="number" class="input password" placeholder="phone">
+                <div class="third-section-btn-div">
+                    <a href="#" class="third-s-btn">request call back</a>
+                </div>
+            </div>
+        </div>
+
+    </section>
+    <section class="moduleSection-1">
+        <h1 class="secondary">II. VISUAL FX – ADOBE AFTER EFFECTS</h1>
+
+        <div class="lists-2">
+            <ul class="list list-style-2">
+                <h1 class="secondary">LESSON 1. DIGITAL VIDEO BASICS</h1>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Analog versus digital</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Frame rate and resolution</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Understanding your Storage space</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Knowing your system requirements</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Defining motion Graphics</li>
+            </ul>
+            <ul class="list list-style-2">
+                <h1 class="secondary">LESSON 2. AFTER EFFECTS INTERFACE</h1>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Creating a project</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Understanding the After Effects panel system</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Understanding the Composition Window</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Working in the Timeline Window</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> RAM Preview vs. Standard Preview</li>
+            </ul>
+        </div>
+    </section>
+    <section class="moduleSection-1">
+        <div class="lists-2">
+            <ul class="list list-style-2">
+                <h1 class="secondary">
+                    LESSON 3. MEDIA MANAGEMENT</h1>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Importing media files</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Importing Photoshop and Illustrator files</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Previewing footage, stills and video, audio</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Trimming a video clip</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Using the Interpret Footage dialog box</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Looping an audio or video file</li>
+            </ul>
+            <ul class="list list-style-2">
+                <h1 class="secondary">LESSON 4. LAYERS IN ADOBE AFTER EFFECTS</h1>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Understanding the Uses of Titles in Video</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Creating &amp; working with Graphic Clips</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Adding Images to a Graphic Clip</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Creating an end credit roll</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Time stretch and frame blending</li>
+            </ul>
+        </div>
+    </section>
+    <section class="moduleSection-1">
+        <div class="lists-2">
+            <ul class="list list-style-2">
+                <h1 class="secondary">
+                    LESSON 5. USING KEYFRAMES IN ADOBE AFTER EFFECTS</h1>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Animation of layer properties using keyframes</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Using layer parenting to ease repetition</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Understanding motion paths</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Working with layer blending</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Controlling the speed of animations</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Easing principles</li>
+            </ul>
+            <ul class="list list-style-2">
+                <h1 class="secondary">LESSON 6. USING TEXT IN ADOBE AFTER EFFECTS</h1>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Creating text</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Character palette</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Paragraph palette</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Animating text with keyframes</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Animating text using presets</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Using Bridge with After Effects</li>
+            </ul>
+        </div>
+    </section>
+    <section class="moduleSection-1">
+        <div class="lists-2">
+            <ul class="list list-style-2">
+                <h1 class="secondary">
+                    LESSON 7. MASKING, ALPHA CHANNELS &EFFECTS</h1>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Masking</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Animating masks</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Working with alpha channels</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Track matte</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Effect basics</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Animating effects</li>
+            </ul>
+            <ul class="list list-style-2">
+                <h1 class="secondary">LESSON 8. INTRODUCTION TO 3D IN AFTER EFFECTS</h1>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Masking</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Animating masks</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Working with alpha channels</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Track matte</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Effect basics</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Animating effects</li>
+            </ul>
+        </div>
+    </section>
+    <section class="moduleSection-1">
+        <div class="lists-2">
+            <ul class="list list-style-2">
+                <h1 class="secondary">
+                    LESSON 9. OUTPUTTING IN ADOBE AFTER EFFECTS</h1>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Rendering from a composition to various formats</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Understanding the Render Queue</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Adjusting render settings</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Duplicating jobs in the Render Queue</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Creating render templates</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Exporting a project file</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Rendering an individual frame</li>
+            </ul>
+            <ul class="list list-style-2">
+                <h1 class="secondary">LESSON 10. CAMERA & MOTION TRACKING</h1>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Using the 3d camera tracker Compositing</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> 3d graphics with video</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Understanding motion tracking</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Motion tracking vs stabilization</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Setting a track point</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Using null objects</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Using the warp stabilizer</li>
+            </ul>
+        </div>
+    </section>
+    <section class="moduleSection-1">
+        <div class="lists-2">
+            <ul class="list list-style-2">
+                <h1 class="secondary">
+                    LESSON 11. TIME REMAPPING VIDEO</h1>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Understanding time remapping</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Slow motion effects</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Fast motion effects</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Using frame blending</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Color correction and adjustment</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Adjusting tonality</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Adjusting Color</li>
+            </ul>
+            <ul class="list list-style-2">
+                <h1 class="secondary">LESSON 12. CREATING A BACKGROUND LOOP</h1>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Expressions overview</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Creating scripts</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Using expressions</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Effect parameters</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Layer index</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Creating keyframe looping</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Conditional events</li>
+            </ul>
+        </div>
+    </section>
+    <section class="moduleSection-1">
+        <div class="lists-2">
+            <ul class="list list-style-2">
+                <h1 class="secondary">
+                    LESSON 13. USING THE CLONING TOOLS</h1>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Understanding high dynamic range</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Creating linear HDR compositing</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Understanding color management</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Creating Look up tables (LUT)</li>
+            </ul>
+            <ul class="list list-style-2">
+                <h1 class="secondary">LESSON 14. COLOR, LIGHT, AND HEAT</h1>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Creating Lighting qualities</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Changing lighting direction &amp; light strength</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Creating reflections &amp; realistic shadow</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Understanding Multipass 3D compositing</li>
+            </ul>
+        </div>
+    </section>
+    <section class="moduleSection-1">
+        <div class="lists-2">
+            <ul class="list list-style-2">
+                <h1 class="secondary">
+                    LESSON 15. CREATING ENVIRONMENTAL EFFECTS</h1>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Creating fog, smoke, mist, wind, precipitation</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Making realistic fire and heat distortion</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Creating explosive effects</li>
+            </ul>
+            <ul class="list list-style-2">
+                <h1 class="secondary">LESSON 16. ROTOSCOPING VIDEO FOOTAGE</h1>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Creating manual rotoscoping</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Using the roto brush</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Using the paint brush to Painting on color</li>
+            </ul>
+        </div>
+    </section>
+    <section class="moduleSection-1">
+        <div class="lists-2">
+            <ul class="list list-style-2">
+                <h1 class="secondary">
+                    LESSON 17. PROJECT OPTIMIZATION</h1>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Using Media management</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Managing multiple projects</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Optimizing system performance</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Optimizing render speed</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Render que Output module templates</li>
+            </ul>
+            <ul class="list list-style-2">
+                <h1 class="secondary">LESSON 18. CHROMA KEYING</h1>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Understanding greenscreen shooting basics</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Using masks for compositing</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Using garbage mattes</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Using keylight</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Refining a matte</li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="form-section">
+        <div class="form-s-content">
+            <span class="form-section-span">instant inquiry</span>
+            <div class="input-div">
+                <input type="text" class="input name" placeholder="name">
+                <input type="email" class="input email" placeholder="email">
+                <input type="number" class="input password" placeholder="phone">
+                <div class="third-section-btn-div">
+                    <a href="#" class="third-s-btn">request call back</a>
+                </div>
+            </div>
+        </div>
+
+    </section>
+    <section class="moduleSection-1">
+        <h1 class="secondary">III. SOUND EDITING WITH ADOBE AUDITION</h1>
+
+        <div class="lists-2">
+            <ul class="list list-style-2">
+                <h1 class="secondary">
+                    LESSON 1. AUDIO INTERFACE & BASIC EDITING</h1>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Audio interface basics</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Testing inputs and outputs with Audition</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Optimizing system performance</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Using external interfaces</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Opening a file for editing</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Selecting a region for editing</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Cutting, deleting, and pasting audio regions</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Cutting and pasting with multiple clipboards</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Extending and shortening musical selections</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Simultaneous mixing and pasting</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Repeating part of a waveform to create a loop</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Showing waveform data under the cursor</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Fading regions to reduce artifacts</li>
+            </ul>
+            <ul class="list list-style-2">
+                <h1 class="secondary">LESSON 2. SIGNAL PROCESSING</h1>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Effects basics</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Using the Effects Rack</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Amplitude and Compression effects</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Delay and echo effects</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Filter and EQ effects</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Modulation effects</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Noise reduction/restoration</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Reverb &amp; Special effects</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Stereo imagery effects</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Time and Pitch effect</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Third-party effects (VST and AU)</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Using the Effects menu</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Managing presets</li>
+            </ul>
+        </div>
+    </section>
+    <section class="moduleSection-1">
+        <div class="lists-2">
+            <ul class="list list-style-2">
+                <h1 class="secondary">
+                    LESSON 3. AUDIO RESTORATION</h1>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Reducing hiss, crackles</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Reducing pops and clicks</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Reducing broadband noise</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> De-humming a file</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Removing artifacts</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Manual artifact removal</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Alternate click Sound removal</li>
+            </ul>
+            <ul class="list list-style-2">
+                <h1 class="secondary">LESSON 4. MASTERING</h1>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Mastering basics</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Equalization</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Dynamics</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Ambience</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Stereo imaging</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> “Push” the drum hits; then apply the changes</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Mastering diagnostics</li>
+            </ul>
+        </div>
+    </section>
+    <section class="moduleSection-1">
+        <div class="lists-2">
+            <ul class="list list-style-2">
+                <h1 class="secondary">
+                    LESSON 5. SOUND DESIGN</h1>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Reducing hiss, crackles</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Reducing pops and clicks</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Reducing broadband noise</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> De-humming a file</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Removing artifacts</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Manual artifact removal</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Alternate click Sound removal</li>
+            </ul>
+            <ul class="list list-style-2">
+                <h1 class="secondary">LESSON 6. CREATING AND RECORDING FILES</h1>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Recording into the Waveform Editor</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Recording into the Multitrack Editor</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Checking remaining free space</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Drag-and-dropping into an Audition Editor</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Importing tracks as individual files</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Importing tracks as a single file from an audio CD
+                </li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Saving a template</li>
+            </ul>
+        </div>
+    </section>
+    <section class="moduleSection-1">
+        <div class="lists-2">
+            <ul class="list list-style-2">
+                <h1 class="secondary">
+                    LESSON 7. MULTITRACK EDITOR ORIENTATION</h1>
+                <li><i class='far fa-arrow-alt-circle-right'></i> About multitrack production</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Multitrack and Waveform Editor integration</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Changing track colors</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Loop selections for playback</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Track controls</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Channel mapping in the Multitrack Editor</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Side-chaining effects</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> The Multitrack Mixer View</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Mixer view basics</li>
+            </ul>
+            <ul class="list list-style-2">
+                <h1 class="secondary">LESSON 8. EDITING CLIPS</h1>
+                <li><i class='far fa-arrow-alt-circle-right'></i> About multitrack production</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Multitrack and Waveform Editor integration</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Changing track colors</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Loop selections for playback</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Track controls</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Channel mapping in the Multitrack Editor</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Side-chaining effects</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> The Multitrack Mixer View</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Mixer view basics</li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="moduleSection-1">
+        <div class="lists-2">
+            <ul class="list list-style-2">
+                <h1 class="secondary">
+                    LESSON 9. CREATING MUSIC WITH SOUND LIBRARIES</h1>
+                <li><i class='far fa-arrow-alt-circle-right'></i> About sound libraries</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Getting started</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Building a rhythm track</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Adding percussion</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Adding melodic elements</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Using loops with different pitch and tempo</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Adding effects</li>
+            </ul>
+            <ul class="list list-style-2">
+                <h1 class="secondary">LESSON 10. RECORDING IN THE MULTITRACK EDITOR</h1>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Getting ready to record a track</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Setting up the metronome</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Recording a part in a track</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Recording an additional part (overdub)</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> “Punching” over a mistake</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Composite recording</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> About, Clip &amp; Track Automation</li>
+            </ul>
+        </div>
+    </section>
+    <section class="moduleSection-1">
+        <div class="lists-2">
+            <ul class="list list-style-2">
+                <h1 class="secondary">
+                    LESSON 10. RECORDING IN THE MULTITRACK EDITOR</h1>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Getting ready to record a track</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Setting up the metronome</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Recording a part in a track</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Recording an additional part (overdub)</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> “Punching” over a mistake</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Composite recording</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> About, Clip &amp; Track Automation</li>
+            </ul>
+            <ul class="list list-style-2">
+                <h1 class="secondary">LESSON 11. MIXING</h1>
+                <li><i class='far fa-arrow-alt-circle-right'></i> About mixing</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Testing your acoustics</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> The mixing process</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Exporting a stereo mix of the song</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Burning an audio CD of the song</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Exporting to SoundCloud</li>
+            </ul>
+        </div>
+    </section>
+    <section class="form-section">
+        <div class="form-s-content">
+            <span class="form-section-span">instant inquiry</span>
+            <div class="input-div">
+                <input type="text" class="input name" placeholder="name">
+                <input type="email" class="input email" placeholder="email">
+                <input type="number" class="input password" placeholder="phone">
+                <div class="third-section-btn-div">
+                    <a href="#" class="third-s-btn">request call back</a>
+                </div>
+            </div>
+        </div>
+
+    </section>
+    </section>
+    <div class="third-s-forth-card third-s-card">
+        <a class="third-section-card" href="..\multimedia_&_animation\multimedia&Animation.html">
+            <span class="courseName"
+                style="color: white;background-image: linear-gradient(to right bottom,rgb(241, 157, 0),rgb(255, 38, 0));">Tally-ERP</span>
+
+            <div class="third-section-image">
+                <img class="third-s-img" src="../assests/img/AnimationCourses/img1.jfif" alt="">
+            </div>
+            <div class="third-section-first-span">
+                <span class="third-s-first-span">diploma in 3D animation course</span>
+            </div>
+            <div class="third-second-second-span">
+                <span class="third-s-second-span">character modelling, VFX, visual effects sketching</span>
+            </div>
+
+        </a>
+        <a class="third-section-card" href="..\vfx\vfx.html">
+            <span class="courseName"
+                style="color: white;background-image: linear-gradient(to right bottom,rgb(255, 0, 0),rgb(247, 0, 255));">VFX</span>
+
+            <div class="third-section-image">
+                <img class="third-s-img" src="../assests/img/AnimationCourses/img2.jfif" alt="">
+            </div>
+            <div class="third-section-first-span">
+                <span class="third-s-first-span">VFX Visual Effects Course</span>
+            </div>
+            <div class="third-second-second-span">
+                <span class="third-s-second-span">VFX, Special Effects, Advanced Adobe After Effects</span>
+            </div>
+
+        </a>
+        <a class="third-section-card" href="..\character_modelling\characterModelling.html">
+            <span class="courseName"
+                style="color: white;background-image: linear-gradient(to right bottom,rgb(93, 0, 241),rgb(76, 0, 255));">Character
+                Modelling Course</span>
+
+
+            <div class="third-section-image">
+                <img class="third-s-img" src="../assests/img/AnimationCourses/img3.jfif" alt="">
+            </div>
+            <div class="third-section-first-span">
+                <span class="third-s-first-span">Character Modelling Course</span>
+            </div>
+            <div class="third-second-second-span">
+                <span class="third-s-second-span">Character Animation, Advanced Graphic, 3D MAX</span>
+            </div>
+
+        </a>
+        <a class="third-section-card" href="..\maya_3d_animaition\maya3dAnimaition.html">
+            <span class="courseName"
+                style="color: white;background-image: linear-gradient(to right bottom,green,rgb(51, 85, 51));">3D
+                Maya Animation</span>
+
+            <div class="third-section-image">
+                <img class="third-s-img" src="../assests/img/AnimationCourses/img4.jpg" alt="">
+            </div>
+            <div class="third-section-first-span">
+                <span class="third-s-first-span">3D Maya Animation Course</span>
+            </div>
+            <div class="third-second-second-span">
+                <span class="third-s-second-span">Maya Animation, Sketching, Rigging, Rendering, Lighting</span>
+            </div>
+
+        </a>
+    </div>
+
+
+    <div class="footer">
+        <div class="footerDiv">
+            <h3 class="fotterDiv-heading">address</h3>
+            <span class="footerDiv-span"><i class="fa fa-paper-plane-o"></i>1st Floor Roshan Complax, Gali Number 2,
+                near Evergreen Sweets, Mamura, Sector 66, Noida, Uttar Pradesh 201301.</span>
+            <span class="footerDiv-span"><i class="fa fa-phone"></i><a class="phoneNumberLink"
+                    href="tel:8826118037">8826118037</a> / <a class="phoneNumberLink"
+                    href="tel:9650173057">7053301150</a></span>
+            <span class="footerDiv-span"><i class="fa fa-envelope-o"></i><a class="emailAddressLink"
+                    href="mailTo:sunrisecomputernoida@gmail.com">sunrisecomputernoida@gmail.com</a></span>
+            <div class="footer-social-media">
+                <a href="https://facebook.com"><i class='fab fa-facebook'></i></a>
+                <a href="https://instagram.com"><i class='fab fa-instagram'></i></a>
+                <a href="https://twitter.com"><i class='fab fa-twitter'></i></a>
+                <a href="https://youtube.com"><i class='fab fa-youtube'></i></a>
+            </div>
+        </div>
+        <div class="footerDiv">
+            <h3 class="fotterDiv-heading">top Courses</h3>
+            <a class="footerDiv-link" href="../digital_marketing\digitalMarketing.html">digital marketing
+                courses</a>
+            <a class="footerDiv-link" href="../tally_erp_executive/tallyErpExecutive.html">tally-accounting
+                courses</a>
+            <a class="footerDiv-link" href="../autocad/autocad.html">autoCad marchitecture courses</a>
+            <a class="footerDiv-link" href="../maya_3d_animaition/maya3dAnimaition.html">3d max diploma courses</a>
+            <a class="footerDiv-link" href="../graphic_designing/graphicDesigning.html">graphic design courses</a>
+        </div>
+        <div class="footerDiv">
+            <h3 class="fotterDiv-heading">other courses</h3>
+            <a class="footerDiv-link" href="../revit_architecture/revitArchitecture.html">revit architecute
+                courses</a>
+            <a class="footerDiv-link" href="../web_designing/webdesigning.html">website desigining courses</a>
+            <a class="footerDiv-link" href="../multimedia_&_animation/multimedia&Animation.html">master multimedia
+                Courses</a>
+            <a class="footerDiv-link" href="../maya_3d_animaition/maya3dAnimaition.html">3D animation Courses</a>
+            <a class="footerDiv-link" href="../fashion_designing/fashionDesigning.html">fashion desigining
+                courses</a>
+            courses</a>
+        </div>
+
+
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+        crossorigin="anonymous"></script>
+    <script src="../navigation-bar.js"></script>
+    <script src="../button.js"></script>
+</body>
+
+</html>

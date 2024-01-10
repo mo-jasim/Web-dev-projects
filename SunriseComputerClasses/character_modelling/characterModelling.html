@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/29c2b75804.js" crossorigin="anonymous"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/first_section.css">
+    <link rel="stylesheet" href="../css/third-section.css">
+    <link rel="stylesheet" href="../css/form-section.css">
+    <link rel="stylesheet" href="../css/footer.css">
+    <title>Document</title>
+</head>
+<style>
+    * {
+        box-sizing: border-box;
+        padding: 0;
+        margin: 0;
+    }
+
+    .header {
+        display: flex;
+        height: 80vh;
+        flex-direction: row;
+    }
+
+    .secondary {
+        font-size: 40px;
+    }
+
+    .tertiary {
+        font-size: 25px;
+    }
+
+    .textContent {
+        color: white;
+        text-transform: capitalize;
+        font-style: italic;
+    }
+
+    .section {
+        width: 50%;
+        height: 100%;
+    }
+
+    .left {
+        background-image: linear-gradient(to right bottom, transparent, rgba(0, 0, 0, 0.8) 100%), url(../assests/img/background_image3.jpg);
+        background-size: cover;
+        position: relative;
+
+    }
+
+    .textContainer {
+        text-align: center;
+        width: 70%;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .right {
+        background-color: #eee;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .list {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .list-style-1 {
+        list-style: none;
+        font-size: 20px;
+    }
+
+    .list-style-2 {
+        list-style: none;
+        font-size: 25px;
+    }
+
+    .fa-arrow-alt-circle-right {
+        background-image: linear-gradient(to right bottom, rgb(255, 0, 0), rgb(111, 0, 255));
+        color: transparent;
+        background-clip: text;
+        -webkit-background-clip: text;
+    }
+
+    .moduleSection-1,
+    .moduleSection-2 {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .moduleSection-1 h1,
+    .moduleSection-2 h1 {
+        background-image: linear-gradient(to right, rgb(255, 0, 0), rgb(111, 0, 255));
+        color: transparent;
+        background-clip: text;
+        -webkit-background-clip: text;
+        font-size: 30px;
+        text-align: center;
+        font-style: italic;
+
+    }
+
+    .lists-4 {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: auto;
+    }
+
+    .lists-2 {
+        display: grid;
+        grid-template-columns: repeat(2, auto);
+        grid-template-rows: auto;
+        justify-content: space-evenly;
+
+    }
+
+    .descriptionMain {
+        width: 100%;
+        height: fit-content;
+    }
+
+    .descriptionDiv {
+        width: 70%;
+        height: fit-content;
+        margin: 0 auto;
+        padding: 20px;
+    }
+
+    .nav-pills {
+        justify-content: space-between;
+        background-color: #eee;
+    }
+
+    @media (max-width:1250px) {
+        .lists-4 {
+            grid-template-columns: repeat(2, auto);
+        }
+    }
+
+    @media (max-width:1050px) {
+        .descriptionDiv {
+            width: 100%;
+        }
+    }
+
+    @media (max-width: 700px) {
+        .header {
+            flex-direction: column;
+            height: max-content;
+        }
+
+        .section {
+            width: 100%;
+        }
+
+        .left {
+            height: 80vh;
+        }
+
+        .textContainer {
+
+            width: 100%;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+    }
+
+    @media (max-width:450px) {
+
+        .lists-2,
+        .lists-4 {
+            grid-template-columns: repeat(1, auto);
+        }
+
+    }
+
+    @media (max-width:350px) {
+
+        .lists-2,
+        .lists-4 {
+            grid-template-columns: repeat(1, auto);
+        }
+    }
+</style>
+
+<body>
+    <div class="contact-navbar">
+        <div class="contact-info">
+            <i class="fa fa-phone"></i>
+            <span class="phoneNumber">Sunrise Computer Classes : <a class="phoneNumberLink"
+                    href="tel:8826118037">8826118037</a>
+                , <a class="phoneNumberLink" href="tel:9650173057">7053301150</a></span>
+            <i class="fa fa-envelope-o"></i>
+            <span class="emailId"><a class="emailAddressLink"
+                    href="mailTo:sunrisecomputernoida@gmail.com">sunrisecomputernoida@gmail.com</a></span>
+        </div>
+        <div class="social-media-links">
+            <a href="https://www.facebook.com/Sunrisecarrier/?ref=bookmarks">
+                <i class="fab fa-facebook"></i>
+            </a>
+            <a href="https://www.instagram.com/sunriseclassesnoida1/">
+                <i class="fab fa-instagram"></i>
+            </a>
+            <a href="https://twitter.com/ClassesNoida">
+                <i class="fab fa-twitter"></i>
+            </a>
+            <a href="https://www.youtube.com/channel/UCQeoMZErJ4ENUl3VM_f78Mg/featured?view_as=subscriber">
+                <i class="fab fa-youtube"></i>
+            </a>
+        </div>
+    </div>
+    <nav class="navigation-bar sticky-top">
+        <a href="../computer.html"><img class="logo-image" src="../assests/img/logo.jpg" alt=""></a>
+        <div class="open-nav-button">
+            <i class="fa fa-bars"></i>
+        </div>
+        <div class="nav-box">
+            <a class="navigation-bar-link" href="../computer.html">home</a>
+
+            <a class="dropdown">
+                <a class="dropdown-toggle navigation-bar-link" type="button" id="dropdownMenuButton1"
+                    data-bs-toggle="dropdown" aria-expanded="false">
+                    tally & excel
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                    <li><a class="dropdown-item" href="../advance_excel/AdvanceExcel.html">advance excel</a></li>
+                    <li><a class="dropdown-item" href="../tally_erp_executive/tallyErpExecutive.html">tally erp
+                            executive</a></li>
+                    <li><a class="dropdown-item" href="../tally_erp_operations/tallyErpOperations.html">tally erp
+                            operations</a></li>
+
+                </ul>
+            </a>
+            <a class="dropdown">
+                <a class="dropdown-toggle navigation-bar-link" type="button" id="dropdownMenuButton1"
+                    data-bs-toggle="dropdown" aria-expanded="false">
+                    graphic & web
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                    <li><a class="dropdown-item" href="../web_designing/webdesigning.html">advance diploma in web
+                            designing</a></li>
+                    <li><a class="dropdown-item" href="../graphic_designing/graphicDesigning.html">advance diploma in
+                            graphic designing</a></li>
+                    <li><a class="dropdown-item" href="../photoshop/photoshop.html">advance photoshop course</a></li>
+
+                </ul>
+            </a>
+            <a class="dropdown">
+                <a class="dropdown-toggle navigation-bar-link" type="button" id="dropdownMenuButton1"
+                    data-bs-toggle="dropdown" aria-expanded="false">
+                    animation
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                    <li><a class="dropdown-item" href="../multimedia_&_animation/multimedia&Animation.html">1 year
+                            multimedia & animation</a></li>
+                    <li><a class="dropdown-item" href="../maya_3d_animaition/maya3dAnimaition.html">maya 3d animaition
+                            course</a></li>
+                    <li><a class="dropdown-item"
+                            href="../Premeire_Pro_Video_Editing_Course/PremeireProVideoEditingCourse.html">premeire pro
+                            video editing course</a></li>
+                    <li><a class="dropdown-item" href="../character_modelling/characterModelling.html">character
+                            modelling
+                            course</a></li>
+                    <li><a class="dropdown-item" href="../vfx/vfx.html">vfx visual effects & video course</a></li>
+                </ul>
+            </a>
+            <a class="dropdown">
+                <a class="dropdown-toggle navigation-bar-link" type="button" id="dropdownMenuButton1"
+                    data-bs-toggle="dropdown" aria-expanded="false">
+                    architecture
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                    <li><a class="dropdown-item" href="../autocad/autocad.html">autocad 2d & 3d</a></li>
+                    <li><a class="dropdown-item" href="../revit_architecture/revitArchitecture.html">diploma in revit
+                            architecture</a></li>
+                    <li><a class="dropdown-item" href="../3d_max/3dMax.html">3d max course</a></li>
+                    <li><a class="dropdown-item" href="../revit_mep/Revit mep.html">revit mep</a></li>
+                </ul>
+            </a>
+
+            <a class="dropdown">
+                <a class="dropdown-toggle navigation-bar-link" type="button" id="dropdownMenuButton1"
+                    data-bs-toggle="dropdown" aria-expanded="false">
+                    digital marketing
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                    <li><a class="dropdown-item" href="../digital_marketing/digitalMarketing.html">digital marketing
+                            course
+                            - top rated</a></li>
+
+                    <li><a class="dropdown-item" href="../internet_marketing/internetMarketing.html">1 year master in
+                            internet marketing course</a></li>
+                </ul>
+            </a>
+
+            <div class="close-nav-button">
+                <i class="fa fa-times"></i>
+            </div>
+            <span class="icons">
+                <a href="https://facebook.com"><i class="fab fa-facebook"></i></a>
+                <a href="https://instagram.com"><i class="fab fa-instagram"></i></a>
+                <a href="https://twitter.com"><i class="fab fa-twitter"></i></a>
+                <a href="https://youtube.com"><i class="fab fa-youtube"></i></a>
+            </span>
+        </div>
+    </nav>
+
+    <header class="header">
+        <button onclick="topFunction()" id="goToTopBtn" class="goToTopBtn" title="Go to top">
+            <i class='fas fa-arrow-circle-up'></i>
+        </button>
+        <div class="section left">
+            <div class="textContainer">
+                <span class="textContent secondary">
+                    CHARACTER MODELLING COURSE
+                    Special Offer ₹ <s>51,550</s>/- 36,550/-
+                </span>
+            </div>
+        </div>
+        <div class="section right">
+            <ul class="list-style-1 list">
+                <li class="tertiary"><i class='far fa-arrow-alt-circle-right'></i> SOFTWARE</li>
+                Autodesk 3ds Max, formerly 3D Studio and 3D Studio Max, is a professional 3D computer graphics program
+                for making 3D animations, models, games, and images. It is developed and produced by Autodesk Media and
+                Entertainment.
+                <li class="tertiary"><i class='far fa-arrow-alt-circle-right'></i> PRE-REQUISITES</li>
+                Basic knowledge of Windows
+                Working knowledge of Photoshop/ Illustrator.
+            </ul>
+        </div>
+    </header>
+
+    <section class="form-section">
+        <div class="form-s-content">
+            <span class="form-section-span">instant inquiry</span>
+            <div class="input-div">
+                <input type="text" class="input name" placeholder="name">
+                <input type="email" class="input email" placeholder="email">
+                <input type="number" class="input password" placeholder="phone">
+                <div class="third-section-btn-div">
+                    <a href="#" class="third-s-btn">request call back</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="moduleSection-1">
+        <div class="lists-2">
+            <ul class="list list-style-2">
+                <h1 class="secondary">INTRODUCTION</h1>
+                Advanced 3D Animation Course in 3D max. This 3D Animation course is 5 months short term certified
+                course, taught by the experienced professionals. This course has especially designed for the students
+                having a creative imagination, want to become a successful animation professional.
+            </ul>
+        </div>
+    </section>
+
+    <section class="moduleSection-1">
+        <h1 class="secondary">WHAT YOU WILL LEARN?</h1>
+
+
+        <div class="lists-2">
+
+            <ul class="list list-style-2">
+                <li><i class='far fa-arrow-alt-circle-right'></i> Modeling Facades</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Setting up Virtual Studio</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Modeling Techniques</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Working with ACE Objects</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Materials and Mapping</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Viewpost Real Time</li>
+            </ul>
+            <ul class="list list-style-2">
+                <li><i class='far fa-arrow-alt-circle-right'></i> Lighting and Rendering in 3ds Max</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Simulating Exterior Lighting</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Object Manipulation</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Animating Techniques</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Animating Facial Expressions</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Pivot Modifiers</li>
+
+            </ul>
+        </div>
+    </section>
+
+    <section class="moduleSection-1">
+        <h1 class="secondary">CAREER PATHS</h1>
+
+        <div class="lists-2">
+
+            <ul class="list list-style-2">
+                <li><i class='far fa-arrow-alt-circle-right'></i> Story Board Artist</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Clean-up Artist</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Digital Artist</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Layout Artist</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Lighting &amp; Shading</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> inBetween Artist</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Key Frame Artist</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Compositor</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Image Editor</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Digital Ink Artist</li>
+
+            </ul>
+            <ul class="list list-style-2">
+
+                <li><i class='far fa-arrow-alt-circle-right'></i> Rigging Artist</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Lighting Artist</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Animator Artist</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Digital Effects Painter</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Digital Sculptor</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> 3D Modeler</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Video Editor</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Audio Editor</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Paint Artist</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Scanner Operator</li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="moduleSection-1">
+        <h1 class="secondary">6. COURSE CONTENT</h1>
+
+        <div class="lists-2">
+            <ul class="list list-style-2">
+                <h1 class="secondary">MODULE 1. INTRODUCTION TO 3DS MAX</h1>
+                <li><i class='far fa-arrow-alt-circle-right'></i> 3D in production workflows</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Understanding modeling : Materials, animation, and
+                    rendering</li>
+            </ul>
+            <ul class="list list-style-2">
+                <h1 class="secondary">MODULE 2. 3DS MAX INTERFACE OVERVIEW</h1>
+
+                <li><i class='far fa-arrow-alt-circle-right'></i> Creating objects: primitives such as boxes</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> 3D objects from 2D shape: 3D text, extrusions</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Transforms: position, rotation, and scale</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Managing objects: layers, hide, and isolate</li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="moduleSection-1">
+        <div class="lists-2">
+            <ul class="list list-style-2">
+                <h1 class="secondary">MODULE 3. INTRODUCTION TO MATERIALS</h1>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Adding lights and cameras</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Rendering: mental ray only</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> More complex objects: modifiers</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Booleans and compound objects</li>
+            </ul>
+            <ul class="list list-style-2">
+                <h1 class="secondary">MODULE 4. INTRODUCTION TO POLYGON MODELING</h1>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Vertex, edge, poly sub-objects</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> More complex materials: UVW coordinates</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Maps and Materials</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Texture unwrapping and painting with Photoshop</li>
+            </ul>
+            <ul class="list list-style-2">
+                <h1 class="secondary">MODULE 5. INTRODUCTION TO ANIMATION</h1>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Keyframe animation</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Animating lights and cameras</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Rendering animation sequences</li>
+                <li><i class='far fa-arrow-alt-circle-right'></i> Editing and compositing animation footage</li>
+            </ul>
+        </div>
+
+
+        <div class="third-s-forth-card third-s-card">
+            <a class="third-section-card" href="..\multimedia_&_animation\multimedia&Animation.html">
+                <span class="courseName"
+                    style="color: white;background-image: linear-gradient(to right bottom,rgb(241, 157, 0),rgb(255, 38, 0));">Tally-ERP</span>
+
+                <div class="third-section-image">
+                    <img class="third-s-img" src="../assests/img/AnimationCourses/img1.jfif" alt="">
+                </div>
+                <div class="third-section-first-span">
+                    <span class="third-s-first-span">diploma in 3D animation course</span>
+                </div>
+                <div class="third-second-second-span">
+                    <span class="third-s-second-span">character modelling, VFX, visual effects sketching</span>
+                </div>
+
+            </a>
+            <a class="third-section-card" href="..\vfx\vfx.html">
+                <span class="courseName"
+                    style="color: white;background-image: linear-gradient(to right bottom,rgb(255, 0, 0),rgb(247, 0, 255));">VFX</span>
+
+                <div class="third-section-image">
+                    <img class="third-s-img" src="../assests/img/AnimationCourses/img2.jfif" alt="">
+                </div>
+                <div class="third-section-first-span">
+                    <span class="third-s-first-span">VFX Visual Effects Course</span>
+                </div>
+                <div class="third-second-second-span">
+                    <span class="third-s-second-span">VFX, Special Effects, Advanced Adobe After Effects</span>
+                </div>
+
+            </a>
+            <a class="third-section-card" href="..\character_modelling\characterModelling.html">
+                <span class="courseName"
+                    style="color: white;background-image: linear-gradient(to right bottom,rgb(93, 0, 241),rgb(76, 0, 255));">Character
+                    Modelling Course</span>
+
+
+                <div class="third-section-image">
+                    <img class="third-s-img" src="../assests/img/AnimationCourses/img3.jfif" alt="">
+                </div>
+                <div class="third-section-first-span">
+                    <span class="third-s-first-span">Character Modelling Course</span>
+                </div>
+                <div class="third-second-second-span">
+                    <span class="third-s-second-span">Character Animation, Advanced Graphic, 3D MAX</span>
+                </div>
+
+            </a>
+            <a class="third-section-card" href="..\maya_3d_animaition\maya3dAnimaition.html">
+                <span class="courseName"
+                    style="color: white;background-image: linear-gradient(to right bottom,green,rgb(51, 85, 51));">3D
+                    Maya Animation</span>
+
+                <div class="third-section-image">
+                    <img class="third-s-img" src="../assests/img/AnimationCourses/img4.jpg" alt="">
+                </div>
+                <div class="third-section-first-span">
+                    <span class="third-s-first-span">3D Maya Animation Course</span>
+                </div>
+                <div class="third-second-second-span">
+                    <span class="third-s-second-span">Maya Animation, Sketching, Rigging, Rendering, Lighting</span>
+                </div>
+
+            </a>
+        </div>
+
+
+        <div class="footer">
+            <div class="footerDiv">
+                <h3 class="fotterDiv-heading">address</h3>
+                <span class="footerDiv-span"><i class="fa fa-paper-plane-o"></i>1st Floor Roshan Complax, Gali Number 2,
+                    near Evergreen Sweets, Mamura, Sector 66, Noida, Uttar Pradesh 201301.</span>
+                <span class="footerDiv-span"><i class="fa fa-phone"></i><a class="phoneNumberLink"
+                        href="tel:8826118037">8826118037</a> / <a class="phoneNumberLink"
+                        href="tel:9650173057">7053301150</a></span>
+                <span class="footerDiv-span"><i class="fa fa-envelope-o"></i><a class="emailAddressLink"
+                        href="mailTo:sunrisecomputernoida@gmail.com">sunrisecomputernoida@gmail.com</a></span>
+                <div class="footer-social-media">
+                    <a href="https://facebook.com"><i class='fab fa-facebook'></i></a>
+                    <a href="https://instagram.com"><i class='fab fa-instagram'></i></a>
+                    <a href="https://twitter.com"><i class='fab fa-twitter'></i></a>
+                    <a href="https://youtube.com"><i class='fab fa-youtube'></i></a>
+                </div>
+            </div>
+            <div class="footerDiv">
+                <h3 class="fotterDiv-heading">top Courses</h3>
+                <a class="footerDiv-link" href="../digital_marketing\digitalMarketing.html">digital marketing
+                    courses</a>
+                <a class="footerDiv-link" href="../tally_erp_executive/tallyErpExecutive.html">tally-accounting
+                    courses</a>
+                <a class="footerDiv-link" href="../autocad/autocad.html">autoCad marchitecture courses</a>
+                <a class="footerDiv-link" href="../maya_3d_animaition/maya3dAnimaition.html">3d max diploma courses</a>
+                <a class="footerDiv-link" href="../graphic_designing/graphicDesigning.html">graphic design courses</a>
+            </div>
+            <div class="footerDiv">
+                <h3 class="fotterDiv-heading">other courses</h3>
+                <a class="footerDiv-link" href="../revit_architecture/revitArchitecture.html">revit architecute
+                    courses</a>
+                <a class="footerDiv-link" href="../web_designing/webdesigning.html">website desigining courses</a>
+                <a class="footerDiv-link" href="../multimedia_&_animation/multimedia&Animation.html">master multimedia
+                    Courses</a>
+                <a class="footerDiv-link" href="../maya_3d_animaition/maya3dAnimaition.html">3D animation Courses</a>
+                <a class="footerDiv-link" href="../fashion_designing/fashionDesigning.html">fashion desigining
+                    courses</a>
+                courses</a>
+            </div>
+
+
+        </div>
+
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+            crossorigin="anonymous"></script>
+        <script src="../navigation-bar.js"></script>
+        <script src="../button.js"></script>
+</body>
+
+</html>
