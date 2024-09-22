@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+    text-decoration: none;
+}
+
+.wrapper {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.counter-div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    width: 350px;
+    height: 350px;
+    background-color: white;
+    border-radius: 30px;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.144);
+    padding: 2rem;
+}
+
+.counter{
+    font-size: 150px;
+    font-weight: 600;
+}
+
+.btn-group{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.decrement{
+    font-size: 35px;
+    padding: 0 20px;
+    background-color: red;
+    color: white;
+    border: none;
+    transition: all 0.2s ease-in-out;
+    cursor: pointer;
+}
+
+.decrement:hover{
+    background-color: #d80000;
+}
+
+.increment{
+    font-size: 35px;
+    padding: 0 20px;
+    background-color: blue;
+    color: white;
+    border: none;
+    transition: all 0.2s ease-in-out;
+    cursor: pointer;
+}
+
+.increment:hover{
+    background-color: #007bff;
+}
+
+.reset{
+    font-size: 25px;
+    padding: 7px 20px;
+    background-color: #ededed;
+    color: black;
+    border: none;
+    transition: all 0.2s ease-in-out;
+    cursor: pointer;
+}
+
+.reset:hover{
+    background-color: #dddddd;
+}

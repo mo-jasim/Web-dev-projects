@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+
+body{
+    overflow-x: hidden;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+    text-decoration: none;
+    list-style: none;
+}
+
+a {
+    color: black;
+}
+
+:root {
+    --main-color: #5FA6C4;
+    --secondary-color: #0084FF;
+}
+
+header{
+    width: 100vw;
+    padding: 1rem 0;
+    background-color: white;
+    border-bottom: 1px solid #21212147;
+}
+
+.wrapper{
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+}
+
+.logo-container{
+    width: 15%;
+}
+
+.nav-links-container{
+    width: 80%;
+}
+
+.btn-container{
+    width: 15%;
+}
+
+.logo{
+    width: 150px;
+}
+
+.nav-links{
+    position: relative;
+    list-style: none;
+    display: flex;
+    justify-content: end;
+    gap: 1rem;
+}
+
+.nav-links li a:hover{
+    color: #5FA6C4;
+}
+
+.btn{
+    padding: 12px 20px;
+    background-color: #5FA6C4;
+    color: white;
+    border: none;
+    border-radius: 30px;
+    transition: all 0.3s ease-in-out;
+}
+
+.digi:hover .drop-down {
+    opacity: 1;
+}
+
+.drop-down{
+    opacity: 0;
+    background-color: white;
+    position: absolute;
+    top: 40px;
+    left: 140px;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    width: 30%;
+    padding: 15px;
+    padding-bottom: 20px;
+    border-left: 3px solid var(--main-color);
+    border-bottom: 3px solid var(--main-color);
+    border-radius: 10px;
+}

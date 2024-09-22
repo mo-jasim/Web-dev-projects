@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+    text-decoration: none;
+}
+
+.wrapper{
+    position: relative;
+}
+
+nav{
+    background-color: #242526;
+    position: fixed;
+    width: 100%;
+    z-index: 99;
+}
+
+nav .wrapper{
+    color: white;
+    max-width: 1200px;
+    padding: 0 30px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 70px;
+    line-height: 70px;
+}
+
+.wrapper .logo a{
+    color: white;
+    font-size: 27px;
+    font-weight: 600;
+}
+
+.wrapper .nav-links{
+    display: inline-flex;
+    gap: 10px;
+}
+
+.nav-links{
+    position: relative;
+}
+
+.nav-links li{
+    list-style: none;
+}
+
+.nav-links li a{
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+    padding: 9px 15px;
+    border-radius: 5px;
+    color: white;
+    transition: all 0.3s ease;
+}
+
+.nav-links li a:hover{
+    background: #3a3b3c;
+}
+
+.nav-links .drop-menu{
+    position: absolute;
+    background: #242526;
+    width: 180px;
+    top: 85px;
+    line-height: 45px;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.nav-links li:hover .drop-menu{
+    top: 65px;
+    opacity: 1;
+    visibility: visible;
+    transition: all 0.3s ease;
+}
+
+.drop-menu li a{
+    width: 100%;
+    display: block;
+    padding:  0 0 0 15px;
+    font-weight: 400;
+    border-radius: 0;
+}
+
+.mega-box{
+    position: absolute;
+    top: 0;
+    background: #242526;
+    width: 100%;
+    left: 0;
+}

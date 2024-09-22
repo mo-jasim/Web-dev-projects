@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Switch Color</title>
+    <style>
+        div {
+            width: 200px;
+            height: 200px;
+            background-color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <div></div>
+    <select onchange="bgChange(this.value)">
+        <option value="red" selected>red</option>
+        <option value="green">green</option>
+        <option value="blue">blue</option>
+        <option value="black">black</option>
+        <option value="orange">orange</option>
+    </select>
+
+    <script>
+        box = document.querySelector('div');
+        function bgChange(color) {
+            box.style.backgroundColor = color;
+        }
+    </script>
+</body>
+
+</html>

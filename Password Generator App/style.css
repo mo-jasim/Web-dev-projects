@@ -1,0 +1,387 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+
+*,
+*::before, 
+*::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+    text-decoration: none;
+}
+
+body{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: rgb(0,255,252);background: linear-gradient(34deg, rgba(0,255,252,1) 0%, rgba(0,82,255,1) 100%);
+}
+
+.container {
+    width: 30%;
+    padding: 2rem;
+    border-radius: 30px;
+}
+
+h1{
+    color: white;
+    text-transform: capitalize;
+    line-height: 1.2;
+    letter-spacing: 2px;
+    text-align: center;
+}
+
+.display-container{
+    position: relative;
+    border-radius: 1rem;
+    border-bottom: 2px solid blue;
+    margin: 1rem 0;
+    background: rgba(255, 255, 255, 0.403);
+    backdrop-filter: blur(50px); 
+}
+
+.display{
+    width: 100%;
+    background-color: transparent;
+    outline: none;
+    border: none;
+    padding: 1rem;
+    color: white!important;
+    font-size: 1.5rem;
+    font-weight: 600;
+    line-height: 30px;
+    letter-spacing: 1px;
+    padding-right: 3.25rem;
+}
+
+.display::placeholder{
+    color: white;
+    text-transform: capitalize;
+    position: absolute;
+    line-height: 30px;
+    opacity: 0.65;
+}
+
+.display-container button{
+    position: absolute;
+    top: 30%;
+    right: 1.5rem;
+}
+
+.input-container{
+    width: 100%;
+    padding: 1.25rem;
+    border-radius: 1rem;
+    border-bottom: 2px solid blue;
+    background: rgba(255, 255, 255, 0.403);
+    backdrop-filter: blur(50px); 
+}
+
+.length-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.length-container p:nth-child(1){
+    color: white;
+    font-size: 1.3rem;
+    font-weight: 500;
+}
+
+.length-container p:nth-child(2){
+    color: white;
+    font-size: 1.3rem;
+    font-weight: 500;
+}
+
+.strength-container{    
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 1.75rem 0;
+}
+
+.strength-container p{
+    color: white;
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+.indicator{
+    width: 1.5rem;
+    height: 1.5rem;
+    border-radius: 50%;
+    border: 2px solid white;
+}
+
+.btn {
+    width: 100%;
+    background-color: #007BFF;
+    color: white;
+    padding: 0.8rem 2.3rem;
+    border: none;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08);
+    font-size: 1.2rem;
+    position: relative;
+    z-index: 1;
+    border-radius: 30px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease; 
+}
+
+.btn::before {
+    width: 100%;
+    height: 100%;
+    content: "";
+    background: linear-gradient(90deg, rgba(0, 145, 255, 0.8), rgba(0, 213, 255, 0.3));
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 30px;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.5s ease-in-out;
+    z-index: -1;
+}
+
+.btn:hover {
+    background-color: #0056b3;
+    color: #ffffff;
+}
+
+.btn:hover::before {
+    transform: scaleX(1);
+}
+
+.btn:active {
+    transform: scale(0.98);
+}
+
+.check{
+    display: flex;
+    align-items: center;
+    margin: 1rem 0;
+    gap: 0 1rem;
+}
+
+.check input{
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border: 1px solid white;
+    border-radius: 0.35rem;
+    cursor: pointer;
+    position: relative;
+}
+
+.check input:checked{
+    background-color: blue;
+}
+
+.check input:checked::before{
+    content: '✔';
+    position: absolute;
+    color: white;   
+    top: -3.5px;
+    left: 50%;
+    transform: translate(-40%);
+    font-size: 1.05rem;
+    font-size: 600;
+}
+
+.check label{
+    font-size: 1.1rem;
+    color: white;
+    font-weight: 600;
+}
+
+.slider{
+    appearance: none;
+    width: 100%;
+    height: 0.75rem;
+    cursor: pointer;
+    background-color: rgb(231, 231, 231);
+    border-radius: 1rem;
+    margin-top: 2rem;
+    margin-bottom: 0.8rem;
+    background-image: linear-gradient(blue, blue);
+    background-repeat: no-repeat;
+    outline: none;
+    border: none;
+}
+
+.slider:focus{
+    outline: 2px solid white;
+}
+
+.slider::-webkit-slider-thumb {
+    position: relative;
+    appearance: none;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    background-color: blue;
+    cursor: pointer;
+    margin-top: -3px;
+    outline: 3px solid white;
+    transition: all 100ms ease;
+}
+
+.slider::-webkit-slider-thumb:hover{
+    box-shadow: 0px 0px 20px 0px rgb(0, 123, 255);
+    background-color: rgb(0, 174, 255);
+}
+
+.copybtn{
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.tooltip{
+    color: white;
+    position: absolute;
+    background-color: blue;
+    font-size: 1rem;
+    top: -35px;
+    left: -25px;
+    padding: 5px 10px;
+    border-radius: 1rem;
+    opacity: 0;
+    transform: scale(0);
+    transform-origin: bottom;
+    transition: all 250ms ease-in-out;
+}
+
+.tooltip.active{
+    opacity: 1;
+    transform: scale(1);
+}
+
+.slider::-moz-range-thumb{
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    background-color: blue;
+    cursor: pointer;
+    appearance: none;
+    margin-top: -3px;
+    outline: 3px solid white;
+    transition: all 100ms ease;
+}
+
+/* Responsive code */
+/* Media Query for Tablets (Portrait and Landscape) */
+@media (max-width: 1024px) {
+    .container {
+        width: 70%;
+    }
+
+    .display {
+        font-size: 1.3rem;
+    }
+
+    .length-container p,
+    .strength-container p {
+        font-size: 1.2rem;
+    }
+
+    .btn {
+        font-size: 1rem;
+        padding: 0.7rem 2rem;
+    }
+
+    .slider::-webkit-slider-thumb {
+        width: 1.75rem;
+        height: 1.75rem;
+    }
+
+    .slider::-moz-range-thumb {
+        width: 1.75rem;
+        height: 1.75rem;
+    }
+}
+
+/* Media Query for Mobile Devices (Large Phones and Smaller Tablets) */
+@media (max-width: 768px) {
+    .container {
+        width: 85%;
+    }
+
+    .display {
+        font-size: 1.2rem;
+        padding: 0.75rem;
+    }
+
+    .display-container button {
+        top: 25%;
+        right: 1rem;
+    }
+
+    .length-container p,
+    .strength-container p {
+        font-size: 1.1rem;
+    }
+
+    .btn {
+        font-size: 0.9rem;
+        padding: 0.6rem 1.8rem;
+    }
+
+    .check label {
+        font-size: 1rem;
+    }
+
+    .slider {
+        margin-top: 1.5rem;
+        height: 0.65rem;
+    }
+
+    .slider::-webkit-slider-thumb {
+        width: 1.5rem;
+        height: 1.5rem;
+    }
+
+    .slider::-moz-range-thumb {
+        width: 1.5rem;
+        height: 1.5rem;
+    }
+}
+
+/* Media Query for Small Mobile Devices (Phones) */
+@media (max-width: 480px) {
+    .container {
+        width: 95%;
+    }
+
+    .display {
+        font-size: 1rem;
+        padding: 0.5rem;
+    }
+
+    .length-container p,
+    .strength-container p {
+        font-size: 1rem;
+    }
+
+    .btn {
+        font-size: 0.8rem;
+        padding: 0.5rem 1.5rem;
+    }
+
+    .slider {
+        margin-top: 1.2rem;
+        height: 0.6rem;
+    }
+
+    .slider::-webkit-slider-thumb,
+    .slider::-moz-range-thumb {
+        width: 1.2rem;
+        height: 1.2rem;
+    }
+}
